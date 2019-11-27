@@ -1,4 +1,4 @@
-<%--
+<%@ page import="Database.MongoAdapter" %><%--
   Created by IntelliJ IDEA.
   User: fatih
   Date: 13.11.2019
@@ -28,6 +28,7 @@
         <jsp:param name="pageName" value="locations" />
     </jsp:include>
 </div>
+
 
 </body>
 </html>

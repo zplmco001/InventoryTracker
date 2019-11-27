@@ -7,7 +7,38 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="05d68a75-2d56-4e8a-99f9-3435ef13adeb" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_mongodb_mongo_java_driver_3_11_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/web_war_exploded/Css/Index.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/web_war_exploded/Script/Index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/web_war_exploded/WEB-INF/classes/Database/MongoAdapter.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/web_war_exploded/WEB-INF/classes/META-INF/InventoryTracker.kotlin_module" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/web_war_exploded/WEB-INF/classes/edu/aydin/InventroyTracker/Controller/IndexController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/web_war_exploded/WEB-INF/classes/edu/aydin/InventroyTracker/Controller/ProductController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/web_war_exploded/WEB-INF/lib/mongo-java-driver-3.11.2.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/web_war_exploded/addProduct.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/web_war_exploded/header.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/web_war_exploded/home.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/web_war_exploded/navbar.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Database/MongoAdapter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/edu/aydin/InventroyTracker/Controller/ProductController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/Database/MongoAdapter.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/META-INF/InventoryTracker.kotlin_module" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/edu/aydin/InventroyTracker/Controller/IndexController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/edu/aydin/InventroyTracker/Controller/ProductController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/addProduct.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/artifacts/web_war_exploded.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/web_war_exploded.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/InventoryTracker.iml" beforeDir="false" afterPath="$PROJECT_DIR$/InventoryTracker.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/web_war_exploded/WEB-INF/classes/web/programming/MainClass.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/web_war_exploded/WEB-INF/classes/web/programming/MainClass.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/web_war_exploded/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/web_war_exploded/WEB-INF/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/aydin/InventroyTracker/Controller/IndexController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/aydin/InventroyTracker/Controller/IndexController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/web/programming/MainClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/web/programming/MainClass.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/web/programming/MainClass.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/web/programming/MainClass.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/header.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/header.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/home.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/home.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/navbar.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/navbar.jsp" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -72,7 +103,7 @@
     </option>
   </component>
   <component name="RunManager">
-    <configuration name="Tomcat 9.0.21" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.21" ALTERNATIVE_JRE_ENABLED="false">
+    <configuration name="Tomcat 9.0.21" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.26" ALTERNATIVE_JRE_ENABLED="false">
       <deployment>
         <artifact name="web:war exploded">
           <settings>
