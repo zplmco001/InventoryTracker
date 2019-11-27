@@ -1,6 +1,9 @@
 package web.programming;
 
+import Database.MongoAdapter;
 import Model.Product;
+import com.mongodb.MongoClient;
+import org.bson.Document;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -12,6 +15,8 @@ import java.util.ArrayList;
 
 public class MainClass extends HttpServlet {
     private ArrayList<Product> products = new ArrayList<>();
+
+    MongoAdapter mongoAdapter;
 
     @Override
     public void init(){
@@ -25,6 +30,16 @@ public class MainClass extends HttpServlet {
                         "A very nice looking purse",1000, 125,"Zara Purse"));
         products.add(new Product(4,
                 "A very good quality thermos",200, 45,"Sinbat 1Lt"));
+
+        mongoAdapter = new MongoAdapter();
+
+        try{
+            mongoAdapter.getProductCollection().insertOne(new Document().append("name","fatih").append("surname","sezgin"));
+
+        }catch (Exception e){
+            System.out.println(e );
+        }
+
 
     }
     @Override
@@ -40,7 +55,6 @@ public class MainClass extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         req.setAttribute("prods",products);
-
         RequestDispatcher rd = req.getRequestDispatcher("home.jsp");
         rd.forward(req,resp);
     }
