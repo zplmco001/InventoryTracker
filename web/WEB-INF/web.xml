@@ -6,11 +6,11 @@
            version="4.0">
     
     <servlet>
-        <servlet-name>MainClass</servlet-name>
-        <servlet-class>web.programming.MainClass</servlet-class>
+        <servlet-name>Index</servlet-name>
+        <servlet-class>edu.aydin.InventroyTracker.Controller.IndexController</servlet-class>
     </servlet>
     <servlet-mapping>
-        <servlet-name>MainClass</servlet-name>
+        <servlet-name>Index</servlet-name>
         <url-pattern>/handle_login</url-pattern>
     </servlet-mapping>
 
