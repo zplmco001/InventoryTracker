@@ -2,7 +2,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
   <head>
-    <title></title>
+    <title>Inventory Tracker</title>
   </head>
   <body>
   <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
@@ -16,7 +16,7 @@
       font-family: 'Mukta', sans-serif;
       height:100vh;
       min-height:550px;
-      background-image: url(https://www.c41magazine.com/wp-content/uploads/2016/02/83369e16572757.562ae13ca0cf9.gif);
+      background-image: url(https://img-s1.onedio.com/id-5c92508717ad7e87183f5e6a/rev-0/w-635/listing/f-jpg-webp/s-6b97d15e6ba98f3a1099fc3dabe1d34013a7b6be.webp);
       background-repeat: no-repeat;
       background-size:cover;
       background-position:center;
@@ -36,7 +36,7 @@
       right:0;left:0;
       margin:auto;
       height:400px;
-      background-color: rgba(236, 48, 20, 0.9);
+      background-color: #e3f2fdee;
     }
     .white-panel{
       background-color: rgba(255,255, 255, 1);
@@ -162,7 +162,7 @@
     }
     a{
       text-decoration:none;
-      color:#2c7715;
+      color: rgb(30,60,90);
     }
   </style>
 
@@ -200,12 +200,12 @@
   </script>
 
   <div class="login-reg-panel">
-    <div class="login-info-box">
+    <!--<div class="login-info-box">
       <h2>Have an account?</h2>
       <p>Lorem ipsum dolor sit amet</p>
       <label id="label-register" for="log-reg-show">Login</label>
       <input type="radio" name="active-log-panel" id="log-reg-show"  checked="checked">
-    </div>
+    </div>-->
 
     <!--<div class="register-info-box">
         <h2>Don't have an account?</h2>
@@ -218,7 +218,7 @@
       <div class="login-show">
         <h2>LOGIN</h2>
         <form action="handle_login" method="post">
-          User Name: <input type="text" name="username" size="32"><br>
+          Username: <input type="text" name="username" size="32"><br>
           Password: <input type="password" name="pwd" size="32"><br>
           <input type="submit" value="send">
         </form>
