@@ -3,7 +3,7 @@
     <li class="dropdown">
         <a class="dropdown-toggle" data-toggle="dropdown" href="#">Menu 1 <span class="caret"></span></a>
         <ul class="dropdown-menu">
-            <li><a href="addProduct">AddProduct</a></li>
+            <li><a href="addProduct" >AddProduct</a></li>
             <li><a href="#">Submenu 1-2</a></li>
             <li><a href="#">Submenu 1-3</a></li>
         </ul>
