@@ -25,6 +25,8 @@ public class MongoAdapter {
         return mongoDatabase.getCollection("Products");
     }
 
+
+
     public void closeMongoClient(){
         mongoClient.close();
     }
