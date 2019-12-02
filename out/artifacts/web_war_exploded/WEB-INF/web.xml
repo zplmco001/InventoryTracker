@@ -23,4 +23,13 @@
         <url-pattern>/addProduct</url-pattern>
     </servlet-mapping>
 
+    <servlet>
+        <servlet-name>AddUser</servlet-name>
+        <servlet-class>edu.aydin.InventroyTracker.Controller.UserController</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>AddUser</servlet-name>
+        <url-pattern>/addUser</url-pattern>
+    </servlet-mapping>
+
 </web-app>
