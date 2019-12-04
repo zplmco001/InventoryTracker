@@ -30,7 +30,7 @@
     </div>
 
     <div class="container" >
-        <form class="form-inline" action="/action_page.php">
+        <form class="form-inline" >
             <label for="email" class="mr-sm-2">Email address:</label>
             <input type="email" class="form-control mb-2 mr-sm-2" id="email">
             <label for="pwd" class="mr-sm-2">Password:</label>

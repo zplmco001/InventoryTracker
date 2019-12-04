@@ -27,7 +27,7 @@
         </jsp:include>
     </div>
 
-    <div class="container" style="margin-top: 30px; padding: 20px;">
+    <div class="container">
         <form action="addProduct" method="post">
             Name: <input type="text" name="name" size="32"><br>
             Quantity: <input type="text" name="quantity" size="32"><br>
