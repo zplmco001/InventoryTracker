@@ -28,21 +28,13 @@
         </jsp:include>
     </div>
 
-    <div class="container">
+    <div class="container" style="margin-left: 75px">
         <form action="addProduct" method="post">
             Name: <input type="text" name="name" size="32"><br>
             Quantity: <input type="text" name="quantity" size="32"><br>
             <input type="submit" value="send">
         </form>
-
     </div>
-
-
-
 </div>
-
-
-
-
 </body>
 </html>

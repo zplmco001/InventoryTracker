@@ -1,6 +1,8 @@
 package edu.aydin.InventroyTracker.Controller;
 
 import Database.MongoAdapter;
+import Model.Product;
+import com.google.gson.Gson;
 import org.bson.Document;
 
 import javax.servlet.RequestDispatcher;
@@ -9,6 +11,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.util.ArrayList;
 
 public class UserController extends HttpServlet {
 
@@ -22,13 +25,28 @@ public class UserController extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        /*String name = req.getParameter("name");
-        String quantity= req.getParameter("quantity");
+        String firstName = req.getParameter("firstName");
+        String lastName = req.getParameter("lastName");
+        String phone = req.getParameter("phone");
+        String email = req.getParameter("email");
+        String password = req.getParameter("password");
+        boolean isAdmin = Boolean.parseBoolean(req.getParameter("item"));
+        ArrayList<Product> list = new ArrayList();
+        Gson gson = new Gson();
+        String jsonArray = gson.toJson(list);
+        try{
+            mongoAdapter.getUserCollection().insertOne(
+                    new Document("name",firstName)
+                    .append("surname",lastName)
+                    .append("phone",phone)
+                    .append("email",email)
+                    .append("password",password)
+                    .append("productList", jsonArray)
+            );
+        }catch (Exception e){
+            System.out.println(e);
+        }
 
-        mongoAdapter.getProductCollection().insertOne(new Document()
-                .append("name",name).append("quantity",quantity));
-
-        RequestDispatcher rd = req.getRequestDispatcher("home.jsp");
-        rd.forward(req, resp);*/
+        System.out.println(firstName + lastName +phone + email+password+isAdmin);
     }
 }
