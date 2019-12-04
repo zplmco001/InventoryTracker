@@ -8,14 +8,6 @@
   <component name="ChangeListManager">
     <list default="true" id="05d68a75-2d56-4e8a-99f9-3435ef13adeb" name="Default Changelist" comment="database connections for user was added.">
       <change beforePath="$PROJECT_DIR$/.idea/artifacts/web_war_exploded.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/web_war_exploded.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/web_war_exploded/WEB-INF/classes/edu/aydin/InventroyTracker/Controller/IndexController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/web_war_exploded/WEB-INF/classes/edu/aydin/InventroyTracker/Controller/IndexController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/web_war_exploded/home.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/web_war_exploded/home.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/aydin/InventroyTracker/Controller/IndexController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/aydin/InventroyTracker/Controller/IndexController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/aydin/InventroyTracker/Controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/aydin/InventroyTracker/Controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/edu/aydin/InventroyTracker/Controller/IndexController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/aydin/InventroyTracker/Controller/IndexController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/addUser.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/addUser.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/home.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/home.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -216,7 +208,7 @@
       <workItem from="1574972653218" duration="3513000" />
       <workItem from="1575011620278" duration="1538000" />
       <workItem from="1575307611698" duration="6088000" />
-      <workItem from="1575463564956" duration="13719000" />
+      <workItem from="1575463564956" duration="14023000" />
     </task>
     <task id="LOCAL-00001" summary="locin sikrin">
       <created>1574864308100</created>
@@ -253,7 +245,21 @@
       <option name="project" value="LOCAL" />
       <updated>1575478976195</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="addUser developed. bugs fixed">
+      <created>1575481074592</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1575481074592</updated>
+    </task>
+    <task id="LOCAL-00007" summary="addUser developed">
+      <created>1575481098061</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1575481098061</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -277,7 +283,9 @@
     <MESSAGE value="navigation handled" />
     <MESSAGE value="admin privileges is added" />
     <MESSAGE value="database connections for user was added." />
-    <option name="LAST_COMMIT_MESSAGE" value="database connections for user was added." />
+    <MESSAGE value="addUser developed. bugs fixed" />
+    <MESSAGE value="addUser developed" />
+    <option name="LAST_COMMIT_MESSAGE" value="addUser developed" />
   </component>
   <component name="WindowStateProjectService">
     <state x="2089" y="311" width="524" height="485" key="#com.intellij.codeInsight.editorActions.RestoreReferencesDialog" timestamp="1575310146984">
@@ -300,10 +308,10 @@
       <screen x="1366" y="0" width="1920" height="1080" />
     </state>
     <state x="1699" y="332" width="524" height="445" key="#com.intellij.ide.util.PackageChooserDialog/1366.0.1920.1080/0.27.1366.741@1366.0.1920.1080" timestamp="1575309564558" />
-    <state x="151" y="27" width="1103" height="741" key="CommitChangelistDialog2" timestamp="1575481074435">
+    <state x="151" y="27" width="1103" height="741" key="CommitChangelistDialog2" timestamp="1575481097948">
       <screen x="50" y="27" width="1316" height="741" />
     </state>
-    <state x="151" y="27" width="1103" height="741" key="CommitChangelistDialog2/50.27.1316.741@50.27.1316.741" timestamp="1575481074435" />
+    <state x="151" y="27" width="1103" height="741" key="CommitChangelistDialog2/50.27.1316.741@50.27.1316.741" timestamp="1575481097948" />
     <state x="2139" y="311" width="424" height="485" key="FileChooserDialogImpl" timestamp="1575308126305">
       <screen x="1366" y="0" width="1920" height="1080" />
     </state>
@@ -376,14 +384,18 @@
       <screen x="50" y="27" width="1316" height="741" />
     </state>
     <state x="191" y="27" width="1024" height="741" key="SettingsEditor/50.27.1316.741@50.27.1316.741" timestamp="1575477908849" />
-    <state x="303" y="133" width="800" height="529" key="Vcs.Push.Dialog.v2" timestamp="1575478999859">
+    <state x="359" y="114" width="688" height="567" key="VCS.ChangeListViewerDialog" timestamp="1575481351304">
       <screen x="50" y="27" width="1316" height="741" />
     </state>
-    <state x="303" y="133" width="800" height="529" key="Vcs.Push.Dialog.v2/50.27.1316.741@50.27.1316.741" timestamp="1575478999859" />
-    <state x="476" y="317" width="464" height="161" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1575467346585">
+    <state x="359" y="114" width="688" height="567" key="VCS.ChangeListViewerDialog/50.27.1316.741@50.27.1316.741" timestamp="1575481351304" />
+    <state x="303" y="133" width="800" height="529" key="Vcs.Push.Dialog.v2" timestamp="1575481104011">
       <screen x="50" y="27" width="1316" height="741" />
     </state>
-    <state x="476" y="317" width="464" height="161" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/50.27.1316.741@50.27.1316.741" timestamp="1575467346585" />
+    <state x="303" y="133" width="800" height="529" key="Vcs.Push.Dialog.v2/50.27.1316.741@50.27.1316.741" timestamp="1575481104011" />
+    <state x="476" y="317" width="464" height="161" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1575481339799">
+      <screen x="50" y="27" width="1316" height="741" />
+    </state>
+    <state x="476" y="317" width="464" height="161" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/50.27.1316.741@50.27.1316.741" timestamp="1575481339799" />
     <state width="315" height="60" key="javadoc.popup.new" timestamp="1575480570627">
       <screen x="50" y="27" width="1316" height="741" />
     </state>
