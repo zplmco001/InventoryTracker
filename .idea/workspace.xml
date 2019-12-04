@@ -6,31 +6,9 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="05d68a75-2d56-4e8a-99f9-3435ef13adeb" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_code_gson_gson_2_8_6.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Filters/AuthenticationFilter.java" afterDir="false" />
+    <list default="true" id="05d68a75-2d56-4e8a-99f9-3435ef13adeb" name="Default Changelist" comment="database connections for user was added.">
       <change beforePath="$PROJECT_DIR$/.idea/artifacts/web_war_exploded.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/web_war_exploded.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/InventoryTracker.iml" beforeDir="false" afterPath="$PROJECT_DIR$/InventoryTracker.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/web_war_exploded/WEB-INF/classes/Database/MongoAdapter.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/web_war_exploded/WEB-INF/classes/Database/MongoAdapter.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/web_war_exploded/WEB-INF/classes/META-INF/InventoryTracker.kotlin_module" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/web_war_exploded/WEB-INF/classes/META-INF/InventoryTracker.kotlin_module" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/web_war_exploded/WEB-INF/classes/edu/aydin/InventroyTracker/Controller/IndexController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/web_war_exploded/WEB-INF/classes/edu/aydin/InventroyTracker/Controller/IndexController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/web_war_exploded/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/web_war_exploded/WEB-INF/web.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/web_war_exploded/addProduct.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/web_war_exploded/addProduct.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/web_war_exploded/navbar.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/web_war_exploded/navbar.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Database/MongoAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Database/MongoAdapter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/aydin/InventroyTracker/Controller/IndexController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/aydin/InventroyTracker/Controller/IndexController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/aydin/InventroyTracker/Controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/aydin/InventroyTracker/Controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Database/MongoAdapter.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Database/MongoAdapter.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/InventoryTracker.kotlin_module" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/META-INF/InventoryTracker.kotlin_module" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/edu/aydin/InventroyTracker/Controller/IndexController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/aydin/InventroyTracker/Controller/IndexController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/web.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/addProduct.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/addProduct.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/addUser.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/addUser.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -197,7 +175,7 @@
               <path>
                 <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
                 <item name="Tomcat Server" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-                <item name="Running" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+                <item name="Finished" type="7427dc5b:ServiceModel$ServiceGroupNode" />
               </path>
             </expand>
             <select />
@@ -230,7 +208,7 @@
       <workItem from="1574972653218" duration="3513000" />
       <workItem from="1575011620278" duration="1538000" />
       <workItem from="1575307611698" duration="6088000" />
-      <workItem from="1575463564956" duration="11257000" />
+      <workItem from="1575463564956" duration="11642000" />
     </task>
     <task id="LOCAL-00001" summary="locin sikrin">
       <created>1574864308100</created>
@@ -253,7 +231,14 @@
       <option name="project" value="LOCAL" />
       <updated>1574975823509</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="database connections for user was added.">
+      <created>1575478803323</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1575478803323</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -276,7 +261,8 @@
     <MESSAGE value="locin sikrin" />
     <MESSAGE value="navigation handled" />
     <MESSAGE value="admin privileges is added" />
-    <option name="LAST_COMMIT_MESSAGE" value="admin privileges is added" />
+    <MESSAGE value="database connections for user was added." />
+    <option name="LAST_COMMIT_MESSAGE" value="database connections for user was added." />
   </component>
   <component name="WindowStateProjectService">
     <state x="2089" y="311" width="524" height="485" key="#com.intellij.codeInsight.editorActions.RestoreReferencesDialog" timestamp="1575310146984">
@@ -299,10 +285,10 @@
       <screen x="1366" y="0" width="1920" height="1080" />
     </state>
     <state x="1699" y="332" width="524" height="445" key="#com.intellij.ide.util.PackageChooserDialog/1366.0.1920.1080/0.27.1366.741@1366.0.1920.1080" timestamp="1575309564558" />
-    <state x="151" y="27" width="1103" height="741" key="CommitChangelistDialog2" timestamp="1575478751437">
+    <state x="151" y="27" width="1103" height="741" key="CommitChangelistDialog2" timestamp="1575478803088">
       <screen x="50" y="27" width="1316" height="741" />
     </state>
-    <state x="151" y="27" width="1103" height="741" key="CommitChangelistDialog2/50.27.1316.741@50.27.1316.741" timestamp="1575478751437" />
+    <state x="151" y="27" width="1103" height="741" key="CommitChangelistDialog2/50.27.1316.741@50.27.1316.741" timestamp="1575478803088" />
     <state x="2139" y="311" width="424" height="485" key="FileChooserDialogImpl" timestamp="1575308126305">
       <screen x="1366" y="0" width="1920" height="1080" />
     </state>
