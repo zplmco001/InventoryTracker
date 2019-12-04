@@ -21,16 +21,13 @@
 <body>
 
 <jsp:include page="header.jsp" >
-    <jsp:param name="pageName" value="locations" />
+    <jsp:param name="home" value="locations" />
 </jsp:include>
 <c:out value="${requestScope.get('isAdmin')}"/>
 <div>
-    <div class="container" style="height: 100%; margin-left: -10px; width: 180px;">
+    <div class="container" >
         <jsp:include page="navbar.jsp" >
             <jsp:param name="pageName" value="locations" />
-
-
-
         </jsp:include>
     </div>
 </div>

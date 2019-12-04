@@ -16,12 +16,30 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 </head>
 <body>
+<jsp:include page="header.jsp" >
+    <jsp:param name="pageName" value="locations" />
+</jsp:include>
+<c:out value="${requestScope.get('isAdmin')}"/>
+<div class="container">
+    <div class="head">
+        <jsp:include page="navbar.jsp">
+            <jsp:param name="addProduct" value="product"/>
+        </jsp:include>
+    </div>
 
-<form action="addProduct" method="post">
-    Name: <input type="text" name="name" size="32"><br>
-    Quantity: <input type="text" name="quantity" size="32"><br>
-    <input type="submit" value="send">
-</form>
+    <div class="container" style="margin-top: 30px; padding: 20px;">
+        <form action="addProduct" method="post">
+            Name: <input type="text" name="name" size="32"><br>
+            Quantity: <input type="text" name="quantity" size="32"><br>
+            <input type="submit" value="send">
+        </form>
+
+    </div>
+
+
+
+</div>
+
 
 
 
