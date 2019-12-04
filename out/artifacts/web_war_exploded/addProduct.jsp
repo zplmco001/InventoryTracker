@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%--
   Created by IntelliJ IDEA.
   User: fatih
@@ -17,13 +18,13 @@
 </head>
 <body>
 <jsp:include page="header.jsp" >
-    <jsp:param name="pageName" value="locations" />
+    <jsp:param name="pageName" value="addProduct" />
 </jsp:include>
 <c:out value="${requestScope.get('isAdmin')}"/>
 <div class="container">
     <div class="head">
         <jsp:include page="navbar.jsp">
-            <jsp:param name="addProduct" value="product"/>
+            <jsp:param name="pageName" value="addProduct"/>
         </jsp:include>
     </div>
 

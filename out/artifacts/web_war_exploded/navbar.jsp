@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <style>
     .sidenav {
         height: 100%;
@@ -46,10 +47,10 @@
 <div id="mySidenav" class="sidenav">
     <a class="mainMenu" href="#">Home</a>
     <a class="mainMenu" href="#">Users</a>
-    <a class="subMenu" href="addUser">Add User</a>
+    <a <c:if test="${param.pageName == 'addUser'}">href="#" </c:if> class="subMenu" href="addUser">Add User</a>
     <a class="subMenu" href="#">Display Users</a>
     <a class="mainMenu" href="#">Inventory</a>
-    <a class="subMenu" href="addProduct">Add Product</a>
+    <a <c:if test="${param.pageName == 'addProduct'}"> href="#" </c:if> class="subMenu" href="addProduct">Add Product</a>
     <a class="subMenu" href="#">Edit Product</a>
     <a class="mainMenu" href="#">Send Mail</a>
 </div>
