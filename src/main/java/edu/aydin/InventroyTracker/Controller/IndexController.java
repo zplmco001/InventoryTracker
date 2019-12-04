@@ -18,6 +18,15 @@ import java.io.IOException;
 public class IndexController extends HttpServlet {
 
     MongoAdapter mongoAdapter = new MongoAdapter();
+
+    @Override
+    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        String error = (String) req.getAttribute("error");
+        if(error != null){
+
+        }
+    }
+
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         String path="";

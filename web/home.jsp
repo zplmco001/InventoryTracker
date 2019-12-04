@@ -30,6 +30,9 @@
             <jsp:param name="pageName" value="locations" />
         </jsp:include>
     </div>
+    <div style="margin-left: 175px">
+        <c:out value="${requestScope.get('error')}"/>
+    </div>
 </div>
 
 

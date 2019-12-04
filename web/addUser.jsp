@@ -38,6 +38,9 @@
             <label class=mr-sm-2">LastName</label>
             <input type="text" class="form-control mb-2 mr-sm-2" name="lastName"><br>
 
+            <label class=mr-sm-2">Username</label>
+            <input type="text" class="form-control mb-2 mr-sm-2" name="username"><br>
+
             <label class=mr-sm-2">Phone Number</label>
             <input type="text" class="form-control mb-2 mr-sm-2" name="phone"><br>
 

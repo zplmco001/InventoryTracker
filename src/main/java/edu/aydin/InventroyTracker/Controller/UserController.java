@@ -27,6 +27,7 @@ public class UserController extends HttpServlet {
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         String firstName = req.getParameter("firstName");
         String lastName = req.getParameter("lastName");
+        String username= req.getParameter("username");
         String phone = req.getParameter("phone");
         String email = req.getParameter("email");
         String password = req.getParameter("password");
@@ -37,16 +38,22 @@ public class UserController extends HttpServlet {
         try{
             mongoAdapter.getUserCollection().insertOne(
                     new Document("name",firstName)
-                    .append("surname",lastName)
-                    .append("phone",phone)
-                    .append("email",email)
-                    .append("password",password)
-                    .append("productList", jsonArray)
+                            .append("surname",lastName)
+                            .append("username",username)
+                            .append("phone",phone)
+                            .append("email",email)
+                            .append("password",password)
+                            .append("isAdmin",isAdmin)
+                            .append("productList", jsonArray)
             );
         }catch (Exception e){
+            req.setAttribute("error",e);
             System.out.println(e);
         }
 
-        System.out.println(firstName + lastName +phone + email+password+isAdmin);
+        System.out.println(firstName + lastName +username+phone + email+password+isAdmin);
+
+        RequestDispatcher rd = req.getRequestDispatcher("home.jsp");
+        rd.forward(req, resp);
     }
 }
