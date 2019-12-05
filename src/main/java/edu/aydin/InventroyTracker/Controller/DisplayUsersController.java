@@ -1,20 +1,17 @@
 package edu.aydin.InventroyTracker.Controller;
 
 import Database.MongoAdapter;
-import Model.Product;
 import Model.User;
 import com.mongodb.client.MongoCursor;
 import org.bson.Document;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
-import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
 
 
 public class DisplayUsersController extends HttpServlet {
@@ -35,12 +32,32 @@ public class DisplayUsersController extends HttpServlet {
                 String lastName = document.get("surname").toString();
                 String phoneNumber = document.get("phone").toString();
                 String email = document.get("email").toString();
-                List<Document> products = (List<Document>) document.get("productList");
+                //Set<Map.Entry<String, Object>> products = document.
+                Document products = (Document) document.get("productList");
+
+                //Set<String> productsSet = products.keySet();
+
 
                 System.out.println(id+" "+firstName+" "+lastName+" "+phoneNumber+" "+email+" "+products);
 
+
+                HashMap<String,Object> userProduct = new HashMap<>();
+                for(Map.Entry<String,Object> entry : products.entrySet()){
+                    String name = entry.getKey();
+                    int quantity = Integer.parseInt(entry.getValue().toString());
+                    userProduct.put(name,quantity);
+                    System.out.println(name + " " + quantity);
+                }
+
                 User user = new User(id,firstName,lastName,phoneNumber,email);
-                user.setUserProduct(products);
+                user.setUserProduct(userProduct);
+
+                for(Map.Entry<String, Object> entry : user.getUserProduct().entrySet()){
+                    System.out.println("userProduct");
+                    String name = entry.getKey();
+                    int quantity = Integer.parseInt(entry.getValue().toString());System.out.println(name + " " + quantity);
+                }
+
                 userList.add(user);
                 /*user.add(id);
                 user.add(firstName);

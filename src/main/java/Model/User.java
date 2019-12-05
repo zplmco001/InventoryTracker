@@ -1,8 +1,6 @@
 package Model;
 
-import org.bson.Document;
-
-import java.util.List;
+import java.util.HashMap;
 
 public class User {
 
@@ -11,7 +9,7 @@ public class User {
     private String lastname;
     private String phoneNumber;
     private String email;
-    private List<Document> userProduct;
+    private HashMap<String,Object> userProduct;
 
     public User(String id, String firstname, String lastname, String phoneNumber, String email) {
         this.id = id;
@@ -62,11 +60,11 @@ public class User {
         this.email = email;
     }
 
-    public List<Document> getUserProduct() {
+    public HashMap<String,Object> getUserProduct() {
         return userProduct;
     }
 
-    public void setUserProduct(List<Document> userProduct) {
+    public void setUserProduct(HashMap<String, Object> userProduct) {
         this.userProduct = userProduct;
     }
 }
