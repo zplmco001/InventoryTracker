@@ -24,21 +24,23 @@ public class DisplayUsersController extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
-        ArrayList<User> userList = new ArrayList();
+        ArrayList<User> userList = new ArrayList<>();
         MongoCursor<Document> cursor = mongoAdapter.getUserCollection().find().iterator();
         while(cursor.hasNext()){
             System.out.println("çalıştı");
             try{
-
                 Document document = cursor.next();
                 String id = document.get("_id").toString();
                 String firstName = document.get("name").toString();
                 String lastName = document.get("surname").toString();
-                String phoneNumber = document.get("name").toString();
-                String email = document.get("name").toString();
+                String phoneNumber = document.get("phone").toString();
+                String email = document.get("email").toString();
                 List<Document> products = (List<Document>) document.get("productList");
 
+                System.out.println(id+" "+firstName+" "+lastName+" "+phoneNumber+" "+email+" "+products);
+
                 User user = new User(id,firstName,lastName,phoneNumber,email);
+                user.setUserProduct(products);
                 userList.add(user);
                 /*user.add(id);
                 user.add(firstName);

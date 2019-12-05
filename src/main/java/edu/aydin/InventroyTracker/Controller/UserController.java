@@ -44,7 +44,7 @@ public class UserController extends HttpServlet {
                             .append("email",email)
                             .append("password",password)
                             .append("isAdmin",isAdmin)
-                            .append("productList", list)
+                            .append("productList",list)
             );
         }catch (Exception e){
             req.setAttribute("error",e);

@@ -30,7 +30,7 @@
         </jsp:include>
     </div>
 
-    <div class="container">
+    <div class="container" style="margin-left: 75px">
         <table class="table table-striped">
             <thead>
             <tr>
@@ -50,7 +50,11 @@
                 <td>${item.lastname}</td>
                 <td>${item.phoneNumber}</td>
                 <td>${item.email}</td>
-                <td>${item.id}</td>
+                <td>
+                    <c:forEach items="${item.userProduct}" var="users">
+                        <c:out value="${users}"/><br>
+                    </c:forEach>
+                </td>
                 <td> <button type="button" data-toggle="modal" data-target="#edit-user" style="width: 78px !important" class="btn btn-primary ">Edit</button>
                     <button type="button" data-toggle="modal" data-target="#delete-user" style="width: 78px !important" class="btn btn-danger">Delete</button>  </td>
                 </tr>

@@ -1,5 +1,7 @@
 package Model;
 
+import org.bson.Document;
+
 import java.util.List;
 
 public class User {
@@ -9,7 +11,7 @@ public class User {
     private String lastname;
     private String phoneNumber;
     private String email;
-    private List<Product> userProduct;
+    private List<Document> userProduct;
 
     public User(String id, String firstname, String lastname, String phoneNumber, String email) {
         this.id = id;
@@ -60,11 +62,11 @@ public class User {
         this.email = email;
     }
 
-    public List<Product> getUserProduct() {
+    public List<Document> getUserProduct() {
         return userProduct;
     }
 
-    public void setUserProduct(List<Product> userProduct) {
+    public void setUserProduct(List<Document> userProduct) {
         this.userProduct = userProduct;
     }
 }
