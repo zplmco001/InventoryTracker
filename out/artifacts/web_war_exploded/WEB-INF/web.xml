@@ -40,4 +40,24 @@
         <url-pattern>/addUser</url-pattern>
     </servlet-mapping>
 
+    <servlet>
+        <servlet-name>DisplayUsers</servlet-name>
+        <servlet-class>edu.aydin.InventroyTracker.Controller.DisplayUsersController</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>DisplayUsers</servlet-name>
+        <url-pattern>/displayUsers</url-pattern>
+    </servlet-mapping>
+
+
+    <servlet>
+        <servlet-name>SendMail</servlet-name>
+        <servlet-class>edu.aydin.InventroyTracker.Controller.SendMailController</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>SendMail</servlet-name>
+        <url-pattern>/sendMail</url-pattern>
+    </servlet-mapping>
 </web-app>
