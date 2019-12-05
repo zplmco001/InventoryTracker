@@ -53,12 +53,13 @@
                         <form action="addProduct" method="post">
                             Name: <input type="text" name="name" size="32" class="form-control validate"><br>
                             Quantity: <input type="text" name="quantity" size="32" class="form-control validate"><br>
+
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                <button type="submit" class="btn btn-primary">Save changes</button>
+                            </div>
                         </form>
 
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                        <button type="button" class="btn btn-primary">Save changes</button>
                     </div>
                 </div>
 
