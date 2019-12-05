@@ -5,6 +5,7 @@
   Time: 17:49
   To change this template use File | Settings | File Templates.
 --%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
@@ -29,7 +30,7 @@
         </jsp:include>
     </div>
 
-    <div class="container">
+    <div class="container" style="margin-left: 75px">
         <form>
             <div class="form-group row">
                 <label for="staticEmail" class="col-sm-2 col-form-label">To</label>

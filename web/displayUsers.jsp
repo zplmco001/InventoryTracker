@@ -30,7 +30,7 @@
         </jsp:include>
     </div>
 
-    <div class="container">
+    <div class="container" style="margin-left: 75px">
 
 
         <table class="table table-striped">

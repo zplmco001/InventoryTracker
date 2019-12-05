@@ -33,8 +33,8 @@ public class UserController extends HttpServlet {
         String password = req.getParameter("password");
         boolean isAdmin = Boolean.parseBoolean(req.getParameter("item"));
         ArrayList<Product> list = new ArrayList();
-        Gson gson = new Gson();
-        String jsonArray = gson.toJson(list);
+        /*Gson gson = new Gson();
+        String jsonArray = gson.toJson(list);*/
         try{
             mongoAdapter.getUserCollection().insertOne(
                     new Document("name",firstName)
@@ -44,7 +44,7 @@ public class UserController extends HttpServlet {
                             .append("email",email)
                             .append("password",password)
                             .append("isAdmin",isAdmin)
-                            .append("productList", jsonArray)
+                            .append("productList", list)
             );
         }catch (Exception e){
             req.setAttribute("error",e);

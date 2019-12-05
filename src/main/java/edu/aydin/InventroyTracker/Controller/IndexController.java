@@ -22,9 +22,7 @@ public class IndexController extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         String error = (String) req.getAttribute("error");
-        if(error != null){
 
-        }
     }
 
     @Override
@@ -46,12 +44,6 @@ public class IndexController extends HttpServlet {
             path ="index.jsp";
         }
 
-        /*try{
-            mongoAdapter.getUserCollection().insertOne(new Document().append("username",username).append("password",password));
-
-        }catch (Exception e){
-            System.out.println(e );
-        }*/
         RequestDispatcher requestDispatcher = req.getRequestDispatcher(path);
         requestDispatcher.forward(req,resp);
     }
