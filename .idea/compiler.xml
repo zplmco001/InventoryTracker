@@ -10,7 +10,7 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="InventoryTracker" target="11" />
+      <module name="InventoryTracker" target="8" />
     </bytecodeTargetLevel>
   </component>
 </project>

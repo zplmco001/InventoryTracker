@@ -31,22 +31,37 @@
     </div>
 
     <div class="container" style="margin-left: 75px">
-        <form>
+        <form action="sendMail" method="post">
             <div class="form-group row">
-                <label for="staticEmail" class="col-sm-2 col-form-label">To</label>
+                <label for="adminEmail" class="col-sm-2 col-form-label">To</label>
                 <div class="col-sm-10">
-                    <input type="text" readonly class="form-control-plaintext" id="staticEmail" value="adminmail@gmail.com">
+                    <select id="adminEmail" name="adminMail">
+                        <c:forEach items="${requestScope.adminMailList}" var="adminMail">
+                            <option>
+                                ${adminMail}
+                            </option>
+                        </c:forEach>
+                    </select>
                 </div>
             </div>
             <div class="form-group row">
-                <label for="staticEmail2" class="col-sm-2 col-form-label">From</label>
+                <label for="userEmail" class="col-sm-2 col-form-label">From</label>
                 <div class="col-sm-10">
-                    <input type="text" readonly class="form-control-plaintext" id="staticEmail2" value="usermail@gmail.com">
+                    <input name="userMail" type="text" readonly class="form-control-plaintext" id="userEmail" value="seyitaliyaman@gmail.com">
                 </div>
             </div>
+
+            <div class="form-group row">
+                <label for="mailSubject" class="col-sm-2 col-form-label">Subject</label>
+                <div class="col-sm-10">
+                    <input name="mailSubject" type="text" class="form-control-plaintext" id="mailSubject">
+                </div>
+            </div>
+
+
             <div class="form-group">
                 <label for="exampleFormControlTextarea1">Mail</label>
-                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                <textarea name="mail" class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
             </div>
 
             <button type="submit" class="btn btn-primary mb-2">Send Mail</button>
