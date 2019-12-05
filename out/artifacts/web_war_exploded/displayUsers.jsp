@@ -30,9 +30,7 @@
         </jsp:include>
     </div>
 
-    <div class="container" style="margin-left: 75px">
-
-
+    <div class="container">
         <table class="table table-striped">
             <thead>
             <tr>
@@ -43,78 +41,72 @@
                 <th scope="col">E-Mail</th>
                 <th scope="col">Product Count</th>
             </tr>
-
             </thead>
-
             <tbody>
-            <tr>
-                <th scope="row">1</th>
-                <td>deneme</td>
-                <td>deneme</td>
-                <td>deneme</td>
-                <td>deneme</td>
-                <td>deneme</td>
-                <td> <button>edit</button> </td>
-                <td> <button>delete</button>  </td>
-
-            </tr>
-            <tr>
-                <th scope="row">1</th>
-                <td>deneme</td>
-                <td>deneme</td>
-                <td>deneme</td>
-                <td>deneme</td>
-                <td>deneme</td>
-                <td> <button>edit</button> </td>
-                <td> <button>delete</button>  </td>
-
-            </tr>
-            <tr>
-                <th scope="row">1</th>
-                <td>deneme</td>
-                <td>deneme</td>
-                <td>deneme</td>
-                <td>deneme</td>
-                <td>deneme</td>
-                <td> <button>edit</button> </td>
-                <td> <button>delete</button>  </td>
-
-            </tr>
-            <tr>
-                <th scope="row">1</th>
-                <td>deneme</td>
-                <td>deneme</td>
-                <td>deneme</td>
-                <td>deneme</td>
-                <td>deneme</td>
-                <td> <button>edit</button> </td>
-                <td> <button>delete</button>  </td>
-
-            </tr>
-            <tr>
-                <th scope="row">1</th>
-                <td>deneme</td>
-                <td>deneme</td>
-                <td>deneme</td>
-                <td>deneme</td>
-                <td>deneme</td>
-                <td> <button>edit</button> </td>
-                <td> <button>delete</button>  </td>
-
-            </tr>
-
+            <c:forEach items="${requestScope.userList}" var="item" >
+                <tr>
+                <th scope="row">${item.getId}</th>
+                <td>${item.firstname}</td>
+                <td>${item.lastname}</td>
+                <td>${item.phoneNumber}</td>
+                <td>${item.email}</td>
+                <td>${item.id}</td>
+                <td> <button type="button" data-toggle="modal" data-target="#edit-user" style="width: 78px !important" class="btn btn-primary ">Edit</button>
+                    <button type="button" data-toggle="modal" data-target="#delete-user" style="width: 78px !important" class="btn btn-danger">Delete</button>  </td>
+                </tr>
+            </c:forEach>
             </tbody>
-
-
         </table>
 
+        <div style="margin: 100px;">
+            <div class="modal fade" id="edit-user" role="dialog">
+                <div class="modal-dialog">
+                    <!-- Modal content-->
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            <h4 class="modal-title">Modal Header</h4>
+                        </div>
+                        <div class="modal-body">
+                            <form action="displayUsers" method="post">
+                                First Name: <input type="text" name="name" size="32" class="form-control validate"><br>
+                                Last Name: <input type="text" name="quantity" size="32" class="form-control validate"><br>
+                                Phone Number: <input type="text" name="quantity" size="32" class="form-control validate"><br>
+                                E-Mail: <input type="text" name="quantity" size="32" class="form-control validate"><br>
+                            </form>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-primary">Save changes</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div style="margin: 100px;">
+            <div class="modal fade" id="delete-user" role="dialog">
+                <div class="modal-dialog">
+                    <!-- Modal content-->
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            <h4 class="modal-title">Delete User</h4>
+                        </div>
+                        <div class="modal-body">
+                            <h3>Are you sure?</h3>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Dismiss</button>
+                            <button type="button" class="btn btn-primary">Delete</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
 
     </div>
-
-
-
 </div>
-
 </body>
 </html>
