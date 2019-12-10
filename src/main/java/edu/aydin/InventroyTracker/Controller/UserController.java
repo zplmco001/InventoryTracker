@@ -12,6 +12,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
 
 public class UserController extends HttpServlet {
 
@@ -32,7 +34,11 @@ public class UserController extends HttpServlet {
         String email = req.getParameter("email");
         String password = req.getParameter("password");
         boolean isAdmin = Boolean.parseBoolean(req.getParameter("item"));
-        ArrayList<Product> list = new ArrayList();
+        //ArrayList<Product> list = new ArrayList();
+        Map<String,String> list = new HashMap<>();
+        list.put("computer","5000");
+        list.put("phone","4500");
+
         /*Gson gson = new Gson();
         String jsonArray = gson.toJson(list);*/
         try{

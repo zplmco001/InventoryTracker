@@ -78,6 +78,9 @@ public class DisplayUsersController extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+
+        String id = (String) req.getParameter("item.id");
+        System.out.println(id);
         /*String name = req.getParameter("name");
         String quantity= req.getParameter("quantity");
 
