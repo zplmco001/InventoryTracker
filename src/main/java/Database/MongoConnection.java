@@ -27,6 +27,27 @@ public class MongoConnection {
         return success;
     }
 
+    public boolean addUser(String firstname, String lastname, String username, String phone, String email, String password, boolean isAdmin, Map<String,String> productList){
+        try {
+            this.adapter.getUserCollection().insertOne(
+                    new Document("name",firstname)
+                            .append("surname",lastname)
+                            .append("username",username)
+                            .append("phone",phone)
+                            .append("email",email)
+                            .append("password",password)
+                            .append("isAdmin",isAdmin)
+                            .append("productList",productList)
+            );
+
+            return true;
+
+        }catch (Exception e){
+            System.out.println(e);
+            return false;
+        }
+    }
+
     public ArrayList<User> getUserList(){
         ArrayList<User> userList = new ArrayList<>();
         MongoCursor<Document> cursor = adapter.getUserCollection().find().iterator();

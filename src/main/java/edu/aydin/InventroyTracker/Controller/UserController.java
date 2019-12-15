@@ -1,6 +1,7 @@
 package edu.aydin.InventroyTracker.Controller;
 
 import Database.MongoAdapter;
+import Database.MongoConnection;
 import Model.Product;
 import com.google.gson.Gson;
 import org.bson.Document;
@@ -17,7 +18,7 @@ import java.util.Map;
 
 public class UserController extends HttpServlet {
 
-    MongoAdapter mongoAdapter = new MongoAdapter();
+    MongoConnection mongoConnection = new MongoConnection();
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
@@ -39,24 +40,7 @@ public class UserController extends HttpServlet {
         list.put("computer","5000");
         list.put("phone","4500");
 
-        /*Gson gson = new Gson();
-        String jsonArray = gson.toJson(list);*/
-        try{
-            mongoAdapter.getUserCollection().insertOne(
-                    new Document("name",firstName)
-                            .append("surname",lastName)
-                            .append("username",username)
-                            .append("phone",phone)
-                            .append("email",email)
-                            .append("password",password)
-                            .append("isAdmin",isAdmin)
-                            .append("productList",list)
-            );
-        }catch (Exception e){
-            req.setAttribute("error",e);
-            System.out.println(e);
-        }
-
+        mongoConnection.addUser(firstName,lastName,username,phone,email,password,isAdmin,list);
         System.out.println(firstName + lastName +username+phone + email+password+isAdmin);
 
         RequestDispatcher rd = req.getRequestDispatcher("home.jsp");
