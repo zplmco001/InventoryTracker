@@ -3,15 +3,10 @@ package edu.aydin.InventroyTracker.Controller;
 import Database.MailSender;
 import Database.MongoAdapter;
 import com.mongodb.client.MongoCursor;
-import com.sun.mail.smtp.SMTPTransport;
 import org.bson.Document;
 
-import javax.mail.Message;
+
 import javax.mail.MessagingException;
-import javax.mail.Session;
-import javax.mail.Transport;
-import javax.mail.internet.InternetAddress;
-import javax.mail.internet.MimeMessage;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -19,8 +14,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.Date;
-import java.util.Properties;
+
 
 public class SendMailController extends HttpServlet {
 
@@ -39,10 +33,8 @@ public class SendMailController extends HttpServlet {
             String isAdmin = document.get("isAdmin").toString();
             System.out.println("is admin ne geldi : "+isAdmin);
             String email = document.get("email").toString();
-            if(isAdmin.equals("true")){
-                System.out.println("buraya girdi");
-                adminMailList.add(email);
-            }
+            adminMailList.add(email);
+
         }
         req.setAttribute("adminMailList",adminMailList);
         RequestDispatcher rd = req.getRequestDispatcher("sendMail.jsp");

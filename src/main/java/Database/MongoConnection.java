@@ -1,5 +1,6 @@
 package Database;
 
+import Model.Product;
 import Model.User;
 import com.mongodb.client.MongoCursor;
 import org.bson.Document;
@@ -7,6 +8,7 @@ import org.bson.Document;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Properties;
 
 public class MongoConnection {
     MongoAdapter adapter;
@@ -74,5 +76,22 @@ public class MongoConnection {
         }
         return userList;
     }
+
+    public ArrayList<Product> getProductList(){
+        ArrayList<Product> products = new ArrayList<>();
+        MongoCursor<Document> cursor = adapter.getProductCollection().find().iterator();
+        while (cursor.hasNext()){
+            Document document = cursor.next();
+            String productId = document.get("_id").toString();
+            String productName = document.get("name").toString();
+            String productQuantity = document.get("quantity").toString();
+            Product product = new Product(productId,productName,productQuantity);
+            products.add(product);
+        }
+
+        return products;
+    }
+
+
 
 }
