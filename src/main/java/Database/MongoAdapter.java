@@ -1,9 +1,14 @@
 package Database;
 
+import Model.User;
 import com.mongodb.MongoClient;
 
 import com.mongodb.client.MongoCollection;
+import com.mongodb.client.MongoCursor;
 import com.mongodb.client.MongoDatabase;
+import org.bson.Document;
+
+import java.util.ArrayList;
 
 
 public class MongoAdapter {
@@ -25,7 +30,6 @@ public class MongoAdapter {
         System.out.println("Connected to product database");
         return mongoDatabase.getCollection("Products");
     }
-
 
 
     public void closeMongoClient(){
