@@ -15,6 +15,18 @@ public class MongoConnection {
         this.adapter = new MongoAdapter();
     }
 
+    public boolean addroduct(String name, String quantity){
+        boolean success = false;
+        try{
+            this.adapter.getProductCollection().insertOne(new Document().append("name",name).append("quantity",quantity));
+            success = true;
+        }catch (Exception e){
+            System.out.println(e);
+            success = false;
+        }
+        return success;
+    }
+
     public ArrayList<User> getUserList(){
         ArrayList<User> userList = new ArrayList<>();
         MongoCursor<Document> cursor = adapter.getUserCollection().find().iterator();

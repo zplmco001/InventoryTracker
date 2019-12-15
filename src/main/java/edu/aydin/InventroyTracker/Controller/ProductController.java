@@ -1,6 +1,7 @@
 package edu.aydin.InventroyTracker.Controller;
 
 import Database.MongoAdapter;
+import Database.MongoConnection;
 import org.bson.Document;
 
 import javax.servlet.RequestDispatcher;
@@ -12,7 +13,7 @@ import java.io.IOException;
 
 public class ProductController extends HttpServlet {
 
-    MongoAdapter mongoAdapter = new MongoAdapter();
+    MongoConnection mc = new MongoConnection();
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
@@ -22,11 +23,12 @@ public class ProductController extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+
         String name = req.getParameter("name");
         String quantity= req.getParameter("quantity");
+        mc.addroduct(name,quantity);
 
-        mongoAdapter.getProductCollection().insertOne(new Document()
-                .append("name",name).append("quantity",quantity));
+
 
         RequestDispatcher rd = req.getRequestDispatcher("home.jsp");
         rd.forward(req, resp);
