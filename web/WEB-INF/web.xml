@@ -60,4 +60,15 @@
         <servlet-name>SendMail</servlet-name>
         <url-pattern>/sendMail</url-pattern>
     </servlet-mapping>
+
+    <servlet>
+        <servlet-name>Home</servlet-name>
+        <servlet-class>edu.aydin.InventoryTracker.Controller.HomeController</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>Home</servlet-name>
+        <url-pattern>/home</url-pattern>
+    </servlet-mapping>
+
 </web-app>

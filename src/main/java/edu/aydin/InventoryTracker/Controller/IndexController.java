@@ -8,6 +8,7 @@ import org.bson.Document;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
+import javax.servlet.ServletResponse;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -38,13 +39,15 @@ public class IndexController extends HttpServlet {
             if(checkIsAdmin(username)){
                 req.setAttribute("isAdmin",true);
             }
-            path = "home.jsp";
+
+            resp.sendRedirect("home");
         }else{
             path ="index.jsp";
+            RequestDispatcher requestDispatcher = req.getRequestDispatcher(path);
+            requestDispatcher.forward(req,resp);
         }
 
-        RequestDispatcher requestDispatcher = req.getRequestDispatcher(path);
-        requestDispatcher.forward(req,resp);
+
     }
 
     private boolean checkIsAdmin(String username){

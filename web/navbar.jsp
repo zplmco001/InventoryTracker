@@ -45,7 +45,7 @@
 </head>
 <body>
 <div id="mySidenav" class="sidenav">
-    <a <c:if test="${param.pageName == 'home'}">href="#" </c:if> class="mainMenu" href="#">Home</a>
+    <a <c:if test="${param.pageName == 'home'}">href="#" </c:if> class="mainMenu" href="home">Home</a>
     <a <c:if test="${param.pageName == 'users'}">href="#" </c:if> class="mainMenu" href="#">Users</a>
     <a <c:if test="${param.pageName == 'addUser'}">href="#" </c:if> class="subMenu" href="addUser">Add User</a>
     <a <c:if test="${param.pageName == 'displayUsers'}">href="#" </c:if> class="subMenu" href="displayUsers">Display Users</a>
