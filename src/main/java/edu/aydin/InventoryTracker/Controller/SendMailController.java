@@ -3,6 +3,7 @@ package edu.aydin.InventoryTracker.Controller;
 import edu.aydin.InventoryTracker.Database.MailSender;
 import edu.aydin.InventoryTracker.Database.MongoAdapter;
 import com.mongodb.client.MongoCursor;
+import edu.aydin.InventoryTracker.Database.MongoConnection;
 import org.bson.Document;
 
 
@@ -23,20 +24,23 @@ public class SendMailController extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        MongoConnection mc = new MongoConnection();
 
+        String username = (String) req.getSession().getAttribute("username");
+        String userMail = mc.getEmailbyUsername(username);
 
         MongoCursor<Document> cursor = mongoAdapter.getUserCollection().find().iterator();
-
         while (cursor.hasNext()){
             Document document = cursor.next();
-
             String isAdmin = document.get("isAdmin").toString();
             System.out.println("is admin ne geldi : "+isAdmin);
-            String email = document.get("email").toString();
-            adminMailList.add(email);
-
+            if(isAdmin.equals("true")){
+                String email = document.get("email").toString();
+                adminMailList.add(email);
+            }
         }
         req.setAttribute("adminMailList",adminMailList);
+        req.setAttribute("userMail",userMail);
         RequestDispatcher rd = req.getRequestDispatcher("sendMail.jsp");
         rd.forward(req, resp);
     }
