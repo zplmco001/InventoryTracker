@@ -6,7 +6,7 @@
            version="4.0">
     <!--<filter>
         <filter-name>AuthenticationFilter</filter-name>
-        <filter-class>Filters.AuthenticationFilter</filter-class>
+        <filter-class>AuthenticationFilter</filter-class>
     </filter>
     <filter-mapping>
         <filter-name>AuthenticationFilter</filter-name>
@@ -15,7 +15,7 @@
 
     <servlet>
         <servlet-name>Index</servlet-name>
-        <servlet-class>edu.aydin.InventroyTracker.Controller.IndexController</servlet-class>
+        <servlet-class>edu.aydin.InventoryTracker.Controller.IndexController</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>Index</servlet-name>
@@ -24,7 +24,7 @@
 
     <servlet>
         <servlet-name>AddProduct</servlet-name>
-        <servlet-class>edu.aydin.InventroyTracker.Controller.ProductController</servlet-class>
+        <servlet-class>edu.aydin.InventoryTracker.Controller.ProductController</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>AddProduct</servlet-name>
@@ -33,7 +33,7 @@
 
     <servlet>
         <servlet-name>AddUser</servlet-name>
-        <servlet-class>edu.aydin.InventroyTracker.Controller.UserController</servlet-class>
+        <servlet-class>edu.aydin.InventoryTracker.Controller.UserController</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>AddUser</servlet-name>
@@ -42,7 +42,7 @@
 
     <servlet>
         <servlet-name>DisplayUsers</servlet-name>
-        <servlet-class>edu.aydin.InventroyTracker.Controller.DisplayUsersController</servlet-class>
+        <servlet-class>edu.aydin.InventoryTracker.Controller.DisplayUsersController</servlet-class>
     </servlet>
 
     <servlet-mapping>
@@ -53,7 +53,7 @@
 
     <servlet>
         <servlet-name>SendMail</servlet-name>
-        <servlet-class>edu.aydin.InventroyTracker.Controller.SendMailController</servlet-class>
+        <servlet-class>edu.aydin.InventoryTracker.Controller.SendMailController</servlet-class>
     </servlet>
 
     <servlet-mapping>

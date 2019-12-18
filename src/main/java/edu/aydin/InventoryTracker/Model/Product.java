@@ -1,4 +1,4 @@
-package Model;
+package edu.aydin.InventoryTracker.Model;
 public class Product {
 
 

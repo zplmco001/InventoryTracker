@@ -1,10 +1,6 @@
-package edu.aydin.InventroyTracker.Controller;
+package edu.aydin.InventoryTracker.Controller;
 
-import Database.MongoAdapter;
-import Database.MongoConnection;
-import Model.Product;
-import com.google.gson.Gson;
-import org.bson.Document;
+import edu.aydin.InventoryTracker.Database.MongoConnection;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -12,7 +8,6 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
-import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 

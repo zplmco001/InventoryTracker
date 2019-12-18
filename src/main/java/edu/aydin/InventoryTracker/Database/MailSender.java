@@ -1,4 +1,4 @@
-package Database;
+package edu.aydin.InventoryTracker.Database;
 
 import javax.activation.DataHandler;
 import javax.activation.FileDataSource;

@@ -1,53 +1,35 @@
-package edu.aydin.InventroyTracker.Controller;
+package edu.aydin.InventoryTracker.Filters;
 
-import Database.MongoAdapter;
+import edu.aydin.InventoryTracker.Database.MongoAdapter;
 import com.mongodb.BasicDBObject;
-import com.mongodb.DBCursor;
 import com.mongodb.client.FindIterable;
 import com.mongodb.client.MongoCursor;
 import org.bson.Document;
 
-import javax.servlet.RequestDispatcher;
-import javax.servlet.ServletException;
-import javax.servlet.http.HttpServlet;
+import javax.servlet.*;
 import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
 import java.io.IOException;
 
-public class IndexController extends HttpServlet {
+public class AuthenticationFilter implements Filter {
 
     MongoAdapter mongoAdapter = new MongoAdapter();
 
-    @Override
-    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        String error = (String) req.getAttribute("error");
+    public void destroy() {
+    }
+
+    public void doFilter(ServletRequest req, ServletResponse resp, FilterChain chain) throws ServletException, IOException {
+        HttpServletRequest request = (HttpServletRequest) req;
+
+
+        chain.doFilter(req, resp);
+
 
     }
 
-    @Override
-    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        String path="";
-        String username = req.getParameter("username");
-        String password = req.getParameter("password");
-        System.out.println(username+" "+password);
+    public void init(FilterConfig config) throws ServletException {
 
-        if(checkUser(username,password)){
-            HttpSession session = req.getSession();
-            session.setAttribute("username",username);
-            session.setAttribute("password",password);
-            if(checkIsAdmin(username)){
-                req.setAttribute("isAdmin",true);
-            }
-            path = "home.jsp";
-        }else{
-            path ="index.jsp";
-        }
 
-        RequestDispatcher requestDispatcher = req.getRequestDispatcher(path);
-        requestDispatcher.forward(req,resp);
     }
-
     private boolean checkIsAdmin(String username){
 
         BasicDBObject whereQuery = new BasicDBObject();
@@ -82,4 +64,5 @@ public class IndexController extends HttpServlet {
         }
         return false;
     }
+
 }

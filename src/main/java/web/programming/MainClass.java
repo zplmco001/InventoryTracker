@@ -1,8 +1,6 @@
 package web.programming;
 
-import Database.MongoAdapter;
-import Model.Product;
-import com.mongodb.MongoClient;
+import edu.aydin.InventoryTracker.Database.MongoAdapter;
 import org.bson.Document;
 
 import javax.servlet.RequestDispatcher;
@@ -11,7 +9,6 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
-import java.util.ArrayList;
 
 public class MainClass extends HttpServlet {
 

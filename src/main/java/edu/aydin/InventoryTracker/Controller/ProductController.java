@@ -1,8 +1,6 @@
-package edu.aydin.InventroyTracker.Controller;
+package edu.aydin.InventoryTracker.Controller;
 
-import Database.MongoAdapter;
-import Database.MongoConnection;
-import org.bson.Document;
+import edu.aydin.InventoryTracker.Database.MongoConnection;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;

@@ -1,7 +1,7 @@
-package edu.aydin.InventroyTracker.Controller;
+package edu.aydin.InventoryTracker.Controller;
 
-import Database.MailSender;
-import Database.MongoAdapter;
+import edu.aydin.InventoryTracker.Database.MailSender;
+import edu.aydin.InventoryTracker.Database.MongoAdapter;
 import com.mongodb.client.MongoCursor;
 import org.bson.Document;
 

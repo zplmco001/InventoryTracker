@@ -1,14 +1,9 @@
-package Database;
+package edu.aydin.InventoryTracker.Database;
 
-import Model.User;
 import com.mongodb.MongoClient;
 
 import com.mongodb.client.MongoCollection;
-import com.mongodb.client.MongoCursor;
 import com.mongodb.client.MongoDatabase;
-import org.bson.Document;
-
-import java.util.ArrayList;
 
 
 public class MongoAdapter {
