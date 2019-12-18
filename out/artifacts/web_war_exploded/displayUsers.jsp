@@ -45,18 +45,18 @@
             <tbody>
             <c:forEach items="${requestScope.userList}" var="item" >
                 <tr>
-                    <th scope="row">${item.id}</th>
-                    <td>${item.firstname}</td>
-                    <td>${item.lastname}</td>
-                    <td>${item.phoneNumber}</td>
-                    <td>${item.email}</td>
-                    <td>
-                        <c:forEach items="${item.userProduct}" var="users">
-                            <c:out value="${users}"/><br>
-                        </c:forEach>
-                    </td>
-                    <td> <button type="button"  data-toggle="modal" data-target="#edit-user" style="width: 78px !important" class="btn btn-primary" >Edit</button>
-                        <button type="button" data-toggle="modal" data-target="#delete-user" style="width: 78px !important" class="btn btn-danger">Delete</button>  </td>
+                <th scope="row">${item.id}</th>
+                <td>${item.firstname}</td>
+                <td>${item.lastname}</td>
+                <td>${item.phoneNumber}</td>
+                <td>${item.email}</td>
+                <td>
+                    <c:forEach items="${item.userProduct}" var="users">
+                        <c:out value="${users}"/><br>
+                    </c:forEach>
+                </td>
+                <td> <button type="button"  data-toggle="modal" data-target="#edit-user" style="width: 78px !important" class="btn btn-primary" >Edit</button>
+                    <button type="button" data-toggle="modal" data-target="#delete-user" style="width: 78px !important" class="btn btn-danger">Delete</button>  </td>
                 </tr>
             </c:forEach>
             </tbody>
@@ -74,10 +74,10 @@
                         <div class="modal-body">
                             <form action="displayUsers" method="post">
 
-                                First Name: <input type="text" name="name" size="32" class="form-control validate" contenteditable="true"><br>
-                                Last Name: <input type="text" name="quantity" size="32" class="form-control validate"><br>
-                                Phone Number: <input type="text" name="quantity" size="32" class="form-control validate"><br>
-                                E-Mail: <input type="text" name="quantity" size="32" class="form-control validate"><br>
+                                    First Name: <input type="text" name="name" size="32" class="form-control validate" contenteditable="true"><br>
+                                    Last Name: <input type="text" name="quantity" size="32" class="form-control validate"><br>
+                                    Phone Number: <input type="text" name="quantity" size="32" class="form-control validate"><br>
+                                    E-Mail: <input type="text" name="quantity" size="32" class="form-control validate"><br>
 
                             </form>
                         </div>

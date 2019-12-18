@@ -47,7 +47,7 @@
             <div class="form-group row">
                 <label for="userEmail" class="col-sm-2 col-form-label">From</label>
                 <div class="col-sm-10">
-                    <input name="userMail" type="text" readonly class="form-control-plaintext" id="userEmail" value="seyitaliyaman@gmail.com">
+                    <input name="userMail" type="text" readonly class="form-control-plaintext" id="userEmail" value="${requestScope.userMail}">
                 </div>
             </div>
 

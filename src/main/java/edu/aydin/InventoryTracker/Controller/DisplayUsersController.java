@@ -15,15 +15,13 @@ import java.util.*;
 
 public class DisplayUsersController extends HttpServlet {
 
-    MongoAdapter mongoAdapter = new MongoAdapter();
+    MongoConnection mc = new MongoConnection();
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
-        MongoConnection mc = new MongoConnection();
         ArrayList<User> userList;
         userList = mc.getUserList();
-
         req.setAttribute("userList",userList);
 
         RequestDispatcher rd = req.getRequestDispatcher("displayUsers.jsp");

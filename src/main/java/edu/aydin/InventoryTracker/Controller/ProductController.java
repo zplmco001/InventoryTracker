@@ -26,8 +26,6 @@ public class ProductController extends HttpServlet {
         String quantity= req.getParameter("quantity");
         mc.addroduct(name,quantity);
 
-
-
         RequestDispatcher rd = req.getRequestDispatcher("home.jsp");
         rd.forward(req, resp);
     }

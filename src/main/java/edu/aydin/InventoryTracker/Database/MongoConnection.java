@@ -3,7 +3,10 @@ package edu.aydin.InventoryTracker.Database;
 import edu.aydin.InventoryTracker.Model.Product;
 import edu.aydin.InventoryTracker.Model.User;
 import com.mongodb.client.MongoCursor;
+import com.mongodb.client.model.Filters;
+import org.bson.BsonDocument;
 import org.bson.Document;
+import org.bson.conversions.Bson;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -26,6 +29,13 @@ public class MongoConnection {
             success = false;
         }
         return success;
+    }
+
+    public String getEmailbyUsername(String username){
+        Bson bsonFilter = Filters.eq("username",username);
+        Document document = (Document) adapter.getUserCollection().find(bsonFilter).first();
+        System.out.println(document.toJson());
+        return document.getString("email");
     }
 
     public boolean addUser(String firstname, String lastname, String username, String phone, String email, String password, boolean isAdmin, Map<String,String> productList){
