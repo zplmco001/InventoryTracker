@@ -28,7 +28,7 @@
     </servlet>
     <servlet-mapping>
         <servlet-name>AddProduct</servlet-name>
-        <url-pattern>/addProduct</url-pattern>
+        <url-pattern>/displayProducts</url-pattern>
     </servlet-mapping>
 
     <servlet>
