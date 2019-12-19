@@ -93,8 +93,8 @@
                                 <tbody>
                                     <c:forEach items="${requestScope.productList}" var="item" varStatus="count">
                                         <tr class="product">
-                                            <td><input id="cb${count.index}" type="checkbox" value="${item.get("name")}" onchange="valueChanged(${count.index})"> ${item.get("name")} </td>
-                                            <td><input id="q${count.index}" type="text" style="visibility:hidden"></td>
+                                            <td><input id="cb${count.index}" name="pname${count.index}" type="checkbox" value="${item.get("name")}" onchange="valueChanged(${count.index})"> ${item.get("name")} </td>
+                                            <td><input id="q${count.index}" name="quantity${count.index}" type="text" value="0" style="visibility:hidden"></td>
                                         </tr>
                                     </c:forEach>
 

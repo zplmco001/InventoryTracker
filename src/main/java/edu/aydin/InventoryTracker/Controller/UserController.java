@@ -1,5 +1,6 @@
 package edu.aydin.InventoryTracker.Controller;
 
+import com.mongodb.BasicDBObject;
 import edu.aydin.InventoryTracker.Database.MongoConnection;
 import org.bson.Document;
 
@@ -35,10 +36,23 @@ public class UserController extends HttpServlet {
         String email = req.getParameter("email");
         String password = req.getParameter("password");
         boolean isAdmin = Boolean.parseBoolean(req.getParameter("item"));
-        //ArrayList<Product> list = new ArrayList();
+
         Map<String,String> list = new HashMap<>();
-        list.put("computer","5000");
-        list.put("phone","4500");
+        ArrayList<Document> productList = mongoConnection.getProductList();
+        for(int i = 0 ; i < productList.size();i++){
+            String productName = req.getParameter("pname"+i);
+            int productQuantitiy = Integer.parseInt(productList.get(i).getString("quantity"));
+            int wantedQuantity = Integer.parseInt(req.getParameter("quantity"+i));
+            int difference = productQuantitiy-wantedQuantity;
+            if(wantedQuantity > 0 && difference >= 0){
+                list.put(productName,Integer.toString(wantedQuantity));
+                mongoConnection.updateProductQuantity(productName,difference);
+            }else{
+                RequestDispatcher rd = req.getRequestDispatcher("home.jsp");
+                rd.forward(req, resp);
+            }
+            System.out.println(productName+" productQuantitiy"+ productQuantitiy + " wantedQuantity : " + wantedQuantity);
+        }
 
         mongoConnection.addUser(firstName,lastName,username,phone,email,password,isAdmin,list);
         System.out.println(firstName + lastName +username+phone + email+password+isAdmin);

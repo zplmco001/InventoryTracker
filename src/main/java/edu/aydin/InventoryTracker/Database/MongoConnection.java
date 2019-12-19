@@ -84,6 +84,11 @@ public class MongoConnection {
 
         }
     }
+    public void updateProductQuantity(String productName,int toBeUpdated){
+        MongoCollection collection = this.adapter.getProductCollection();
+        Bson bsonFilter = Filters.eq("name", productName);
+        collection.updateOne(bsonFilter, new Document("$set",new Document("quantity",String.valueOf(toBeUpdated))));
+    }
 
     public void addProduct(Map<String,String> map){
         System.out.println("girdiiiiiiii");
