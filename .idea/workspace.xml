@@ -7,12 +7,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="05d68a75-2d56-4e8a-99f9-3435ef13adeb" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/aydin/InventoryTracker/Controller/DisplayUsersController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/aydin/InventoryTracker/Controller/DisplayUsersController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/aydin/InventoryTracker/Controller/IndexController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/aydin/InventoryTracker/Controller/IndexController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/aydin/InventoryTracker/Controller/SendMailController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/aydin/InventoryTracker/Controller/SendMailController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/aydin/InventoryTracker/Database/MongoConnection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/aydin/InventoryTracker/Database/MongoConnection.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/web_war_exploded/WEB-INF/classes/edu/aydin/InventoryTracker/Controller/HomeController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/web_war_exploded/WEB-INF/classes/edu/aydin/InventoryTracker/Controller/HomeController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/web_war_exploded/WEB-INF/classes/edu/aydin/InventoryTracker/Database/MongoConnection.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/web_war_exploded/WEB-INF/classes/edu/aydin/InventoryTracker/Database/MongoConnection.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/web_war_exploded/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/web_war_exploded/WEB-INF/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/web_war_exploded/addUser.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/web_war_exploded/addUser.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/web_war_exploded/displayUsers.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/web_war_exploded/displayUsers.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/edu/aydin/InventoryTracker/Controller/HomeController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/aydin/InventoryTracker/Controller/HomeController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/edu/aydin/InventoryTracker/Database/MongoConnection.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/aydin/InventoryTracker/Database/MongoConnection.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/addUser.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/addUser.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/displayUsers.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/displayUsers.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/sendMail.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/sendMail.jsp" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -279,7 +282,21 @@
       <option name="project" value="LOCAL" />
       <updated>1576773015667</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Edit user has done">
+      <created>1576773148546</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1576773148546</updated>
+    </task>
+    <task id="LOCAL-00015" summary="update product">
+      <created>1576777028033</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1576777028033</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -307,6 +324,7 @@
     <MESSAGE value="some db fixes" />
     <MESSAGE value="Add product" />
     <MESSAGE value="Edit user has done" />
-    <option name="LAST_COMMIT_MESSAGE" value="Edit user has done" />
+    <MESSAGE value="update product" />
+    <option name="LAST_COMMIT_MESSAGE" value="update product" />
   </component>
 </project>
