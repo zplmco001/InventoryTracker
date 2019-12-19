@@ -12,13 +12,10 @@ import org.bson.Document;
 import org.bson.conversions.Bson;
 import org.bson.types.ObjectId;
 
+import javax.print.Doc;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
-import java.util.ArrayList;
-
-import java.util.Date;
-import java.util.HashMap;
-import java.util.Map;
+import java.util.*;
 
 public class MongoConnection {
     MongoAdapter adapter;
@@ -82,6 +79,28 @@ public class MongoConnection {
         }else{
             System.out.println("KULLANICI YOK ÖYLE BİRİ");
 
+        }
+    }
+
+    public void updateProduct(Map<String,String> product){
+        MongoCollection collection = this.adapter.getProductCollection();
+        Document found = (Document) collection.find(new Document("_id",new ObjectId(product.get("_id")))).first();
+
+        ArrayList<String> attrKey = new ArrayList<>(product.keySet());
+        ArrayList<String> attrValue = new ArrayList<>(product.values());
+
+        if(found != null){
+            Document document = new Document();
+            for(int i=0; i<product.size(); i++){
+               if(!attrKey.get(i).equals("_id")){
+                   document.append(attrKey.get(i),attrValue.get(i));
+               }
+            }
+            Bson update = new Document("$set",document);
+            collection.updateOne(found,update);
+
+        }else{
+            System.out.println("product null");
         }
     }
 

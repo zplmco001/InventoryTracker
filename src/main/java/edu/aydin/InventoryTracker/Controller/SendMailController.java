@@ -42,7 +42,6 @@ public class SendMailController extends HttpServlet {
             }
             allMailList.add(email);
 
-
         }
         req.setAttribute("adminMailList",adminMailList);
         req.setAttribute("userMail",userMail);
