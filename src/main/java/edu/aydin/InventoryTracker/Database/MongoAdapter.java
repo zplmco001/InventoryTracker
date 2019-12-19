@@ -26,6 +26,11 @@ public class MongoAdapter {
         return mongoDatabase.getCollection("Products");
     }
 
+    public MongoCollection getDailyVisits(){
+        MongoDatabase mongoDatabase = mongoClient.getDatabase("inventory");
+        return mongoDatabase.getCollection("DailyVisit");
+    }
+
 
     public void closeMongoClient(){
         mongoClient.close();

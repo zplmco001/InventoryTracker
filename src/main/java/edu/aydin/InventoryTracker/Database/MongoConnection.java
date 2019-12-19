@@ -1,5 +1,7 @@
 package edu.aydin.InventoryTracker.Database;
 
+import com.mongodb.BasicDBObject;
+import com.mongodb.client.FindIterable;
 import edu.aydin.InventoryTracker.Model.Product;
 import edu.aydin.InventoryTracker.Model.User;
 import com.mongodb.client.MongoCursor;
@@ -8,7 +10,11 @@ import org.bson.BsonDocument;
 import org.bson.Document;
 import org.bson.conversions.Bson;
 
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+
+import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -70,6 +76,42 @@ public class MongoConnection {
             System.out.println(keys.get(i)+values.get(i));
         }
         this.adapter.getProductCollection().insertOne(doc);
+    }
+
+    public int setVisit(){
+        DateFormat df = new SimpleDateFormat("dd/MM/yyyy");
+        BasicDBObject quer = new BasicDBObject();
+        quer.put("date",df.format(new Date()));
+        FindIterable<Document> result = adapter.getDailyVisits().find(quer);
+        MongoCursor<Document> cursor = result.iterator();
+        int count=1;
+        if (cursor.hasNext()){
+            Document doc = cursor.next();
+            count = Integer.parseInt(doc.get("count").toString())+1;
+            doc.append("count",count);
+            this.adapter.getDailyVisits().replaceOne(quer,doc);
+        }else{
+            Document doc = new Document();
+            doc.append("count",count);
+            doc.append("date",df.format(new Date()));
+            this.adapter.getDailyVisits().insertOne(doc);
+
+        }
+        return count;
+    }
+
+    public int getVisit(){
+
+        DateFormat df = new SimpleDateFormat("dd/MM/yyyy");
+        BasicDBObject quer = new BasicDBObject();
+        quer.put("date",df.format(new Date()));
+        FindIterable<Document> result = adapter.getDailyVisits().find(quer);
+        MongoCursor<Document> cursor = result.cursor();
+
+        Document doc = cursor.next();
+        return Integer.parseInt(doc.get("count").toString())+1;
+
+
     }
 
     public ArrayList<User> getUserList(){

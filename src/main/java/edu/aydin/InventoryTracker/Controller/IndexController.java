@@ -4,6 +4,7 @@ import edu.aydin.InventoryTracker.Database.MongoAdapter;
 import com.mongodb.BasicDBObject;
 import com.mongodb.client.FindIterable;
 import com.mongodb.client.MongoCursor;
+import edu.aydin.InventoryTracker.Database.MongoConnection;
 import org.bson.Document;
 
 import javax.servlet.RequestDispatcher;
@@ -18,6 +19,7 @@ import java.io.IOException;
 public class IndexController extends HttpServlet {
 
     MongoAdapter mongoAdapter = new MongoAdapter();
+    MongoConnection mongoConnection = new MongoConnection();
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
@@ -39,7 +41,7 @@ public class IndexController extends HttpServlet {
             if(checkIsAdmin(username)){
                 req.setAttribute("isAdmin",true);
             }
-
+            mongoConnection.setVisit();
             resp.sendRedirect("home");
         }else{
             path ="index.jsp";
