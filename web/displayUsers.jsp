@@ -43,9 +43,8 @@
             </tr>
             </thead>
             <tbody>
-            <c:forEach items="${requestScope.userList}" var="item" >
+            <c:forEach items="${requestScope.userList}" var="item" varStatus="count">
                 <tr>
-                <th scope="row">${item.id}</th>
                 <td>${item.firstname}</td>
                 <td>${item.lastname}</td>
                 <td>${item.phoneNumber}</td>
@@ -56,64 +55,70 @@
                     </c:forEach>
                 </td>
                 <td>
-                    <button type="button"  data-toggle="modal" data-target="#edit-user" style="width: 78px !important" class="btn btn-primary" >Edit</button>
-                    <button type="button" data-toggle="modal" data-target="#delete-user" style="width: 78px !important" class="btn btn-danger">Delete</button>  </td>
+                    <button type="button" data-toggle="modal" data-target="#edit-user${count.index}" style="width: 78px !important" class="btn btn-primary" >Edit</button>
+                    <button type="button" data-toggle="modal" data-target="#delete-user" style="width: 78px !important" class="btn btn-danger">Delete</button>
+                </td>
                 </tr>
+            <div>
+                <div class="modal fade" id="edit-user${count.index}" role="dialog">
+                    <div class="modal-dialog">
+                        <!-- Modal content-->
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                <h4 class="modal-title">Modal Header</h4>
+                            </div>
+                            <div class="modal-body">
+                                <form action="displayUsers" method="post">
+
+                                    First Name: <input value="${item.firstname}"  type="text" name="name" size="32" class="form-control validate" contenteditable="true"><br>
+                                    Last Name: <input  value="${item.lastname}" type="text" name="lastname" size="32" class="form-control validate"><br>
+                                    Phone Number: <input value="${item.phoneNumber}" type="text" name="phone" size="32" class="form-control validate"><br>
+                                    E-Mail: <input  value="${item.email}" type="text" name="email" size="32" class="form-control validate"><br>
+
+
+                                </form>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                <button type="button" class="btn btn-primary">Save changes</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div>
+                <div class="modal fade" id="delete-user" role="dialog">
+                    <div class="modal-dialog">
+                        <!-- Modal content-->
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                <h4 class="modal-title">Delete User</h4>
+                            </div>
+                            <div class="modal-body">
+                                <h3>Are you sure?</h3>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Dismiss</button>
+                                <button type="button" class="btn btn-primary">Delete</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
             </c:forEach>
             </tbody>
+
         </table>
-
-        <div style="margin: 100px;">
-            <div class="modal fade" id="edit-user" role="dialog">
-                <div class="modal-dialog">
-                    <!-- Modal content-->
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <button type="button" class="close" data-dismiss="modal">&times;</button>
-                            <h4 class="modal-title">Modal Header</h4>
-                        </div>
-                        <div class="modal-body">
-                            <form action="displayUsers" method="post">
-
-                                    First Name: <input type="text" name="name" size="32" class="form-control validate" contenteditable="true"><br>
-                                    Last Name: <input type="text" name="quantity" size="32" class="form-control validate"><br>
-                                    Phone Number: <input type="text" name="quantity" size="32" class="form-control validate"><br>
-                                    E-Mail: <input type="text" name="quantity" size="32" class="form-control validate"><br>
-
-                            </form>
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                            <button type="button" class="btn btn-primary">Save changes</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div style="margin: 100px;">
-            <div class="modal fade" id="delete-user" role="dialog">
-                <div class="modal-dialog">
-                    <!-- Modal content-->
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <button type="button" class="close" data-dismiss="modal">&times;</button>
-                            <h4 class="modal-title">Delete User</h4>
-                        </div>
-                        <div class="modal-body">
-                            <h3>Are you sure?</h3>
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Dismiss</button>
-                            <button type="button" class="btn btn-primary">Delete</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
 
 
     </div>
 </div>
 </body>
 </html>
+
+
+
