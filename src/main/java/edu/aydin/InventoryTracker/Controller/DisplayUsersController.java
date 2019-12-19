@@ -41,6 +41,7 @@ public class DisplayUsersController extends HttpServlet {
 
         User user = new User(id,firstname,lastname,phone,mail);
 
+
         mc.updateUser(user);
 
         RequestDispatcher rd = req.getRequestDispatcher("displayUsers.jsp");

@@ -25,6 +25,7 @@ public class IndexController extends HttpServlet {
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         String error = (String) req.getAttribute("error");
 
+
     }
 
     @Override

@@ -76,6 +76,7 @@
                                     Phone Number: <input value="${item.phoneNumber}" type="text" name="phone" size="32" class="form-control validate"><br>
                                     E-Mail: <input  value="${item.email}" type="text" name="email" size="32" class="form-control validate"><br>
 
+
                                     <div class="modal-footer">
                                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                                         <input type="submit" value="Save changes" class="btn btn-primary">
