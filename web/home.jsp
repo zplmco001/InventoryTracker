@@ -1,10 +1,3 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: fatih
-  Date: 13.11.2019
-  Time: 20:10
-  To change this template use File | Settings | File Templates.
---%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 
@@ -41,17 +34,17 @@
             <div class="col-md-6" style="width:50%">
 
                 <div class="card-body" style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-                border-radius: 5px; padding: 10px;">
+                border-radius: 5px; padding: 10px; background-color: #E0F2F1;">
                     <h2 class="card-title">Number of Defined Users</h2>
                     <h1 style="font-size: 70px; text-align: right">${requestScope.userCount}</h1>
                     <a href="displayUsers" class="btn btn-primary">See Users</a>
                 </div>
             </div>
 
-            <div class="col-md-6" style="width:50%;">
+            <div class="col-md-6" style="width:50%; ">
 
                 <div class="card-body" style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-                border-radius: 5px; padding: 10px;">
+                border-radius: 5px; padding: 10px; background-color: #E0F2F1;">
                     <h2 class="card-title">Number of Defined Products</h2>
                     <h1 style="font-size: 70px; text-align: right">${requestScope.productCount}</h1>
                     <a href="displayUsers" class="btn btn-primary">See Products</a>
@@ -62,21 +55,14 @@
         <div>
 
             <div class="card-body" style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-                border-radius: 5px; padding: 10px; margin-top: 15px;">
+                border-radius: 5px; padding: 10px; margin-top: 15px; background-color: #E0F2F1">
                 <h2 class="card-title">Number of Daily Visit</h2>
                 <h1 style="font-size: 70px; text-align: right">${requestScope.visit}</h1>
 
             </div>
 
         </div>
-
-
-
-
     </div>
 </div>
-
-
-
 </body>
 </html>
