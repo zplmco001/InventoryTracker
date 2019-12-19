@@ -20,12 +20,14 @@ import java.util.ArrayList;
 public class SendMailController extends HttpServlet {
 
     private ArrayList<String> adminMailList = new ArrayList<>();
+    private ArrayList<String> allMailList = new ArrayList<>();
     MongoAdapter mongoAdapter = new MongoAdapter();
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         MongoConnection mc = new MongoConnection();
-
+        adminMailList.clear();
+        allMailList.clear();
         String username = (String) req.getSession().getAttribute("username");
         String userMail = mc.getEmailbyUsername(username);
 
@@ -34,13 +36,17 @@ public class SendMailController extends HttpServlet {
             Document document = cursor.next();
             String isAdmin = document.get("isAdmin").toString();
             System.out.println("is admin ne geldi : "+isAdmin);
+            String email = document.get("email").toString();
             if(isAdmin.equals("true")){
-                String email = document.get("email").toString();
                 adminMailList.add(email);
             }
+            allMailList.add(email);
+
+
         }
         req.setAttribute("adminMailList",adminMailList);
         req.setAttribute("userMail",userMail);
+        req.setAttribute("allMailList",allMailList);
         RequestDispatcher rd = req.getRequestDispatcher("sendMail.jsp");
         rd.forward(req, resp);
     }

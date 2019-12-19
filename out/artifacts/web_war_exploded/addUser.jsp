@@ -16,6 +16,18 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 
+    <style>
+
+        #myInput {
+            background-position: 10px 10px;
+            background-repeat: no-repeat;
+            width: 100%;
+            font-size: 16px;
+            padding: 12px 20px 12px 40px;
+            border: 1px solid #ddd;
+            margin-bottom: 12px;
+        }
+    </style>
 </head>
 <body>
 
@@ -67,9 +79,57 @@
                             <select name="item">
                                 <option value="false">false</option>
                                 <option value="true">true</option>
-
                             </select>
 
+                            <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names.." title="Type in a name">
+                            <table id="myTable" class ="table table-stripped">
+                                <thead>
+                                <tr>
+                                    <th scope="col">Name</th>
+                                    <th scope="col">Quantity</th>
+                                </tr>
+                                </thead>
+
+                                <tbody>
+                                    <c:forEach items="${requestScope.productList}" var="item" varStatus="count">
+                                        <tr class="product">
+                                            <td><input id="cb${count.index}" type="checkbox" value="${item.get("name")}" onchange="valueChanged(${count.index})"> ${item.get("name")} </td>
+                                            <td><input id="q${count.index}" type="text" style="visibility:hidden"></td>
+                                        </tr>
+                                    </c:forEach>
+
+                                    <script>
+
+                                        function valueChanged(a) {
+                                            let cb = document.getElementById("q"+a);
+                                            if(cb.style.visibility == "hidden")
+                                                cb.style.visibility = "visible";
+                                            else
+                                                cb.style.visibility = "hidden";
+                                        }
+
+                                        function myFunction() {
+                                            var input, filter, table, tr, td, i, txtValue;
+                                            input = document.getElementById("myInput");
+                                            filter = input.value.toUpperCase();
+                                            table = document.getElementById("myTable");
+                                            tr = table.getElementsByTagName("tr");
+                                            for (i = 0; i < tr.length; i++) {
+                                                td = tr[i].getElementsByTagName("td")[0];
+                                                if (td) {
+                                                    txtValue = td.textContent || td.innerText;
+                                                    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                                                        tr[i].style.display = "";
+                                                    } else {
+                                                        tr[i].style.display = "none";
+                                                    }
+                                                }
+                                            }
+                                        }
+
+                                    </script>
+                                </tbody>
+                            </table>
                             <!--<div class="form-check mb-2 mr-sm-2">
                                 <label class="form-check-label">
                                     <input class="form-check-input" type="checkbox"> Remember me
@@ -78,7 +138,6 @@
                             <div class="modal-footer">
                                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                                 <button type="submit" class="btn btn-primary mb-2">Submit</button>
-
                             </div>
 
                         </form>
@@ -91,13 +150,6 @@
         </div>
 
     </div>
-
-    <div class="container" style="margin-left: 75px">
-
-
-    </div>
-
-
 
 </div>
 

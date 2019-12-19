@@ -25,6 +25,7 @@ public class IndexController extends HttpServlet {
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         String error = (String) req.getAttribute("error");
 
+
     }
 
     @Override
@@ -40,6 +41,9 @@ public class IndexController extends HttpServlet {
             session.setAttribute("password",password);
             if(checkIsAdmin(username)){
                 req.setAttribute("isAdmin",true);
+                session.setAttribute("isAdmin",true);
+            }else{
+                session.setAttribute("isAdmin",false);
             }
             mongoConnection.setVisit();
             resp.sendRedirect("home");

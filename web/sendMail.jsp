@@ -35,13 +35,27 @@
             <div class="form-group row">
                 <label for="adminEmail" class="col-sm-2 col-form-label">To</label>
                 <div class="col-sm-10">
-                    <select id="adminEmail" name="adminMail">
-                        <c:forEach items="${requestScope.adminMailList}" var="adminMail">
-                            <option>
-                                ${adminMail}
-                            </option>
-                        </c:forEach>
-                    </select>
+                    <c:choose>
+                        <c:when test="${sessionScope.isAdmin}">
+                            <select id="adminEmail" name="adminMail">
+                                <c:forEach items="${requestScope.allMailList}" var="allMail">
+                                    <option>
+                                            ${allMail}
+                                    </option>
+                                </c:forEach>
+                            </select>
+                        </c:when>
+                        <c:otherwise>
+                            <select id="adminEmail" name="adminMail">
+                                <c:forEach items="${requestScope.adminMailList}" var="adminMail">
+                                    <option>
+                                            ${adminMail}
+                                    </option>
+                                </c:forEach>
+                            </select>
+                        </c:otherwise>
+                    </c:choose>
+
                 </div>
             </div>
             <div class="form-group row">
@@ -70,6 +84,7 @@
 
 
     </div>
+
 
 
 
