@@ -106,7 +106,6 @@
                             <div class="modal-footer">
                                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                                 <button type="submit" class="btn btn-primary mb-2">Submit</button>
-
                             </div>
 
                         </form>
