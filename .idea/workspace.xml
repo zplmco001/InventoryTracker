@@ -7,40 +7,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="05d68a75-2d56-4e8a-99f9-3435ef13adeb" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/edu/aydin/InventoryTracker/Controller/HomeController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/web_war_exploded/WEB-INF/classes/Database/MailSender$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/web_war_exploded/WEB-INF/classes/Database/MailSender$SMTPAuthentication.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/web_war_exploded/WEB-INF/classes/Database/MailSender.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/web_war_exploded/WEB-INF/classes/Database/MongoAdapter.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/web_war_exploded/WEB-INF/classes/Filters/AuthenticationFilter.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/web_war_exploded/WEB-INF/classes/META-INF/InventoryTracker.kotlin_module" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/web_war_exploded/WEB-INF/classes/META-INF/InventoryTracker.kotlin_module" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/web_war_exploded/WEB-INF/classes/Model/Product.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/web_war_exploded/WEB-INF/classes/Model/User.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/web_war_exploded/WEB-INF/classes/edu/aydin/InventroyTracker/Controller/DisplayUsersController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/web_war_exploded/WEB-INF/classes/edu/aydin/InventroyTracker/Controller/IndexController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/web_war_exploded/WEB-INF/classes/edu/aydin/InventroyTracker/Controller/ProductController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/web_war_exploded/WEB-INF/classes/edu/aydin/InventroyTracker/Controller/SendMailController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/web_war_exploded/WEB-INF/classes/edu/aydin/InventroyTracker/Controller/UserController.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/web_war_exploded/WEB-INF/classes/web/programming/MainClass.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/web_war_exploded/WEB-INF/classes/web/programming/MainClass.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/web_war_exploded/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/web_war_exploded/WEB-INF/web.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/aydin/InventoryTracker/Controller/IndexController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/aydin/InventoryTracker/Controller/IndexController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Database/MailSender$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Database/MailSender$SMTPAuthentication.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Database/MailSender.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Database/MongoAdapter.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Filters/AuthenticationFilter.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/InventoryTracker.kotlin_module" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/META-INF/InventoryTracker.kotlin_module" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Model/Product.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Model/User.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/edu/aydin/InventroyTracker/Controller/DisplayUsersController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/edu/aydin/InventroyTracker/Controller/IndexController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/edu/aydin/InventroyTracker/Controller/ProductController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/edu/aydin/InventroyTracker/Controller/SendMailController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/edu/aydin/InventroyTracker/Controller/UserController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/web_war_exploded/displayUsers.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/web_war_exploded/displayUsers.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/web_war_exploded/navbar.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/web_war_exploded/navbar.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/aydin/InventoryTracker/Controller/ProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/aydin/InventoryTracker/Controller/ProductController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/aydin/InventoryTracker/Database/MongoConnection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/aydin/InventoryTracker/Database/MongoConnection.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/web/programming/MainClass.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/web/programming/MainClass.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/web.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/navbar.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/navbar.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/addProduct.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/addProduct.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/home.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/home.jsp" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -91,7 +66,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$USER_HOME$/Downloads/taglibs-standard-jstlel-1.2.5.jar!/" />
-    <property name="project.structure.last.edited" value="Artifacts" />
+    <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
@@ -214,7 +189,7 @@
       <workItem from="1576306619220" duration="3055000" />
       <workItem from="1576331263515" duration="143000" />
       <workItem from="1576422901373" duration="7260000" />
-      <workItem from="1576672444288" duration="3842000" />
+      <workItem from="1576672444288" duration="18076000" />
     </task>
     <task id="LOCAL-00001" summary="locin sikrin">
       <created>1574864308100</created>
@@ -279,7 +254,14 @@
       <option name="project" value="LOCAL" />
       <updated>1576673230910</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="some db fixes">
+      <created>1576676875040</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1576676875040</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

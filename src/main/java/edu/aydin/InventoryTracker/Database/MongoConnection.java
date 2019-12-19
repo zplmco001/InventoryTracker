@@ -59,6 +59,19 @@ public class MongoConnection {
         }
     }
 
+    public void addProduct(Map<String,String> map){
+        System.out.println("girdiiiiiiii");
+        Document doc = new Document();
+        ArrayList<String> keys = new ArrayList<>(map.keySet());
+        ArrayList<String> values = new ArrayList<>(map.values());
+        System.out.println(map.size());
+        for (int i = 0; i<map.size();i++){
+            doc.append(keys.get(i),values.get(i));
+            System.out.println(keys.get(i)+values.get(i));
+        }
+        this.adapter.getProductCollection().insertOne(doc);
+    }
+
     public ArrayList<User> getUserList(){
         ArrayList<User> userList = new ArrayList<>();
         MongoCursor<Document> cursor = adapter.getUserCollection().find().iterator();

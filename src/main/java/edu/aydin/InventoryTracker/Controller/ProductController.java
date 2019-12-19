@@ -8,6 +8,10 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 public class ProductController extends HttpServlet {
 
@@ -24,7 +28,38 @@ public class ProductController extends HttpServlet {
 
         String name = req.getParameter("name");
         String quantity= req.getParameter("quantity");
-        mc.addroduct(name,quantity);
+
+        //List<String> parameterNames = new ArrayList<>(req.getParameterMap().keySet());
+        Map<String,String> proVals = new HashMap<>();
+        ArrayList<Map.Entry<String,String[]>> parameterValues = new ArrayList<>(req.getParameterMap().entrySet());
+        for (int i=0;i<parameterValues.size();i++){
+            String key;
+            String value;
+            if (i<2){
+                key = parameterValues.get(i).getKey();
+                value = parameterValues.get(i).getValue()[0];
+
+            }
+            else{
+                key = parameterValues.get(i).getValue()[0];
+                value = parameterValues.get(i+1).getValue()[0];
+                i++;
+            }
+            proVals.put(key,value);
+            System.out.println(key+":"+value);
+        }
+
+        mc.addProduct(proVals);
+
+        /*for(Map.Entry<String, String[]> entry : req.getParameterMap().entrySet()){
+            String parname = entry.getKey();
+            String parvalue = entry.getValue()[0];
+            System.out.println(parname + parvalue);
+        }*/
+        /*while (req.getParameterNames().hasMoreElements()){
+            System.out.println(req.getParameterNames().nextElement());
+        }*/
+        //mc.addroduct(name,quantity);
 
         RequestDispatcher rd = req.getRequestDispatcher("home.jsp");
         rd.forward(req, resp);

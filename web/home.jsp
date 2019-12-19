@@ -17,6 +17,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
 </head>
 <body>
 
@@ -32,6 +33,24 @@
     </div>
     <div style="margin-left: 175px">
         <c:out value="${requestScope.get('error')}"/>
+    </div>
+    <div class="container" style="margin-left: 125px;">
+
+        <div class="row" style="margin-left: 125px;">
+
+
+        </div>
+        <div class="card" style="width:400px;">
+
+            <div class="card-body">
+                <h4 class="card-title">John Doe</h4>
+                <p class="card-text">Some example text some example text. John Doe is an architect and engineer</p>
+                <a href="#" class="btn btn-primary">See Profile</a>
+            </div>
+        </div>
+
+
+
     </div>
 </div>
 
