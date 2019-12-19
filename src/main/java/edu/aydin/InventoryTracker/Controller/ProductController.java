@@ -1,6 +1,7 @@
 package edu.aydin.InventoryTracker.Controller;
 
 import edu.aydin.InventoryTracker.Database.MongoConnection;
+import org.bson.Document;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -19,6 +20,10 @@ public class ProductController extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+
+        ArrayList<Document> products = mc.getProductList();
+        req.setAttribute("products",products);
+
         RequestDispatcher rd = req.getRequestDispatcher("addProduct.jsp");
         rd.forward(req, resp);
     }
