@@ -2,6 +2,7 @@ package edu.aydin.InventoryTracker.Database;
 
 import com.mongodb.BasicDBObject;
 import com.mongodb.client.FindIterable;
+import com.mongodb.client.MongoCollection;
 import edu.aydin.InventoryTracker.Model.Product;
 import edu.aydin.InventoryTracker.Model.User;
 import com.mongodb.client.MongoCursor;
@@ -9,6 +10,7 @@ import com.mongodb.client.model.Filters;
 import org.bson.BsonDocument;
 import org.bson.Document;
 import org.bson.conversions.Bson;
+import org.bson.types.ObjectId;
 
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
@@ -62,6 +64,23 @@ public class MongoConnection {
         }catch (Exception e){
             System.out.println(e);
             return false;
+        }
+    }
+
+    public void updateUser(User user){
+        MongoCollection collection = this.adapter.getUserCollection();
+        System.out.println("gelen id : "+user.getId());
+        Document found = (Document) collection.find(new Document("_id",new ObjectId(user.getId()))).first();
+        if(found!=null){
+            Bson userdata = new Document().append("name",user.getFirstname())
+                    .append("surname",user.getLastname())
+                    .append("phone",user.getPhoneNumber())
+                    .append("email",user.getEmail());
+            Bson upFirst = new Document("$set",userdata);
+            this.adapter.getUserCollection().updateMany(found,upFirst);
+
+        }else{
+            System.out.println("KULLANICI YOK ÖYLE BİRİ");
         }
     }
 

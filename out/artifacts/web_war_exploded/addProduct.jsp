@@ -15,6 +15,20 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <script>
+        var index = 3;
+        function add() {
+
+            var div = document.getElementById('new_chq');
+            console.log();
+            div.innerHTML = div.innerHTML+'<div class=col-md-3>' +
+                '<input type="text" name="key-'+index+'" class="form-control validate"></div>' +
+                '<div class="col-md-9"><input type="text" name="value-'+index+'" class="form-control validate"><br>' +
+                '</div>'
+            index = index+1;
+            console.log(index);
+        }
+    </script>
 </head>
 <body>
 <jsp:include page="header.jsp" >
@@ -47,12 +61,27 @@
                 <div class="modal-content">
                     <div class="modal-header">
                         <button type="button" class="close" data-dismiss="modal">&times;</button>
-                        <h4 class="modal-title">Edit User</h4>
+                        <h4 class="modal-title">Add Product</h4>
                     </div>
                     <div class="modal-body">
                         <form action="addProduct" method="post">
-                            Name: <input type="text" name="name" size="32" class="form-control validate"><br>
-                            Quantity: <input type="text" name="quantity" size="32" class="form-control validate"><br>
+
+                            <div id="new_chq">
+                                <div class="col-md-3">
+                                    <label class="mr-sm-2">Name: </label>
+                                </div>
+                                <div class="col-md-9">
+                                    <input type="text" name="name" class="form-control validate"><br>
+                                </div>
+                                <div class="col-md-3">
+                                    <label class="mr-sm-2">Quantity: </label>
+                                </div>
+                                <div class="col-md-9">
+                                    <input type="text" name="quantity" class="form-control validate"><br>
+                                </div>
+                            </div>
+
+                            <button type="button" onclick="add()" style="margin: 10px;">Add Attribute</button>
 
                             <div class="modal-footer">
                                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>

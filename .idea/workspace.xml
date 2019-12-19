@@ -15,14 +15,14 @@
       <change beforePath="$PROJECT_DIR$/out/artifacts/web_war_exploded/header.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/web_war_exploded/header.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/web_war_exploded/home.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/web_war_exploded/home.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/web_war_exploded/navbar.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/web_war_exploded/navbar.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/aydin/InventoryTracker/Controller/HomeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/aydin/InventoryTracker/Controller/HomeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/web_war_exploded/sendMail.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/web_war_exploded/sendMail.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/aydin/InventoryTracker/Controller/DisplayUsersController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/aydin/InventoryTracker/Controller/DisplayUsersController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/edu/aydin/InventoryTracker/Controller/IndexController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/aydin/InventoryTracker/Controller/IndexController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/aydin/InventoryTracker/Database/MongoAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/aydin/InventoryTracker/Database/MongoAdapter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/aydin/InventoryTracker/Controller/SendMailController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/aydin/InventoryTracker/Controller/SendMailController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/edu/aydin/InventoryTracker/Database/MongoConnection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/aydin/InventoryTracker/Database/MongoConnection.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/web/programming/MainClass.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/header.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/header.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/home.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/home.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/navbar.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/navbar.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/displayUsers.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/displayUsers.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/sendMail.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/sendMail.jsp" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />

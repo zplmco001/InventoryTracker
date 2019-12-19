@@ -40,6 +40,9 @@ public class IndexController extends HttpServlet {
             session.setAttribute("password",password);
             if(checkIsAdmin(username)){
                 req.setAttribute("isAdmin",true);
+                session.setAttribute("isAdmin",true);
+            }else{
+                session.setAttribute("isAdmin",false);
             }
             mongoConnection.setVisit();
             resp.sendRedirect("home");
