@@ -109,10 +109,7 @@
             </div>
             </c:forEach>
             </tbody>
-
         </table>
-
-
     </div>
 </div>
 </body>

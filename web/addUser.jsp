@@ -76,13 +76,26 @@
                                     <th scope="col">Quantity</th>
                                 </tr>
                                 </thead>
+
                                 <tbody>
-                                    <c:forEach items="${requestScope.productList}" var="item">
-                                        <tr>
-                                            <td><input type="text" value="${item.get("name")}" readonly></td>
-                                            <td><input type="text" value="${item.get("quantity")}"></td>
+                                    <c:forEach items="${requestScope.productList}" var="item" varStatus="count">
+                                        <tr class="product">
+                                            <td><input id="cb${count.index}" type="checkbox" value="${item.get("name")}" onchange="valueChanged(${count.index})"> ${item.get("name")} </td>
+                                            <td><input id="q${count.index}" type="text" style="visibility:hidden"></td>
                                         </tr>
                                     </c:forEach>
+
+                                    <script>
+
+                                        function valueChanged(a) {
+                                            let cb = document.getElementById("q"+a);
+                                            if(cb.style.visibility == "hidden")
+                                                cb.style.visibility = "visible";
+                                            else
+                                                cb.style.visibility = "hidden";
+                                        }
+
+                                    </script>
                                 </tbody>
                             </table>
                             <!--<div class="form-check mb-2 mr-sm-2">
@@ -106,13 +119,6 @@
         </div>
 
     </div>
-
-    <div class="container" style="margin-left: 75px">
-
-
-    </div>
-
-
 
 </div>
 
