@@ -34,20 +34,42 @@
     <div style="margin-left: 175px">
         <c:out value="${requestScope.get('error')}"/>
     </div>
-    <div class="container" style="margin-left: 125px;">
+    <div class="container" style="margin-left: 160px;">
 
-        <div class="row" style="margin-left: 125px;">
+        <div class="row" style="margin-top: 10px">
 
+            <div class="col-md-6" style="width:50%">
 
-        </div>
-        <div class="card" style="width:400px;">
-
-            <div class="card-body">
-                <h4 class="card-title">John Doe</h4>
-                <p class="card-text">Some example text some example text. John Doe is an architect and engineer</p>
-                <a href="#" class="btn btn-primary">See Profile</a>
+                <div class="card-body" style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+                border-radius: 5px; padding: 10px;">
+                    <h2 class="card-title">Number of Defined Users</h2>
+                    <h1 style="font-size: 70px; text-align: right">${requestScope.userCount}</h1>
+                    <a href="displayUsers" class="btn btn-primary">See Users</a>
+                </div>
             </div>
+
+            <div class="col-md-6" style="width:50%;">
+
+                <div class="card-body" style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+                border-radius: 5px; padding: 10px;">
+                    <h2 class="card-title">Number of Defined Products</h2>
+                    <h1 style="font-size: 70px; text-align: right">${requestScope.productCount}</h1>
+                    <a href="displayUsers" class="btn btn-primary">See Products</a>
+                </div>
+            </div>
+
         </div>
+        <div>
+
+            <div class="card-body" style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+                border-radius: 5px; padding: 10px; margin-top: 15px;">
+                <h2 class="card-title">Number of Daily Visit</h2>
+                <h1 style="font-size: 70px; text-align: right">${requestScope.visit}</h1>
+
+            </div>
+
+        </div>
+
 
 
 

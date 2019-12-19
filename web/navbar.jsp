@@ -10,6 +10,7 @@
         background-color: rgb(210,230,240);
         overflow-x: hidden;
         padding-top: 20px;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     }
     .mainMenu {
         padding: 6px 8px 6px 16px;
