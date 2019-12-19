@@ -16,6 +16,18 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 
+    <style>
+
+        #myInput {
+            background-position: 10px 10px;
+            background-repeat: no-repeat;
+            width: 100%;
+            font-size: 16px;
+            padding: 12px 20px 12px 40px;
+            border: 1px solid #ddd;
+            margin-bottom: 12px;
+        }
+    </style>
 </head>
 <body>
 
@@ -69,7 +81,8 @@
                                 <option value="true">true</option>
                             </select>
 
-                            <table class ="table table-stripped">
+                            <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names.." title="Type in a name">
+                            <table id="myTable" class ="table table-stripped">
                                 <thead>
                                 <tr>
                                     <th scope="col">Name</th>
@@ -93,6 +106,25 @@
                                                 cb.style.visibility = "visible";
                                             else
                                                 cb.style.visibility = "hidden";
+                                        }
+
+                                        function myFunction() {
+                                            var input, filter, table, tr, td, i, txtValue;
+                                            input = document.getElementById("myInput");
+                                            filter = input.value.toUpperCase();
+                                            table = document.getElementById("myTable");
+                                            tr = table.getElementsByTagName("tr");
+                                            for (i = 0; i < tr.length; i++) {
+                                                td = tr[i].getElementsByTagName("td")[0];
+                                                if (td) {
+                                                    txtValue = td.textContent || td.innerText;
+                                                    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                                                        tr[i].style.display = "";
+                                                    } else {
+                                                        tr[i].style.display = "none";
+                                                    }
+                                                }
+                                            }
                                         }
 
                                     </script>
