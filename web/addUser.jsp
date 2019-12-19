@@ -17,7 +17,6 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 
     <style>
-
         #myInput {
             background-position: 10px 10px;
             background-repeat: no-repeat;
@@ -59,13 +58,11 @@
                         <form action="addUser" method="post" class="form-inline" >
                             <label class=mr-sm-2">Name</label>
                             <input type="text" class="form-control validate" name="firstName"><br>
-
                             <label class=mr-sm-2">LastName</label>
                             <input type="text" class="form-control validate" name="lastName"><br>
 
                             <label class=mr-sm-2">Username</label>
                             <input type="text" class="form-control validate" name="username"><br>
-
                             <label class=mr-sm-2">Phone Number</label>
                             <input type="text" class="form-control validate" name="phone"><br>
 
@@ -91,43 +88,40 @@
                                 </thead>
 
                                 <tbody>
-                                    <c:forEach items="${requestScope.productList}" var="item" varStatus="count">
-                                        <tr class="product">
-                                            <td><input id="cb${count.index}" name="pname${count.index}" type="checkbox" value="${item.get("name")}" onchange="valueChanged(${count.index})"> ${item.get("name")} </td>
-                                            <td><input id="q${count.index}" name="quantity${count.index}" type="text" value="0" style="visibility:hidden"></td>
-                                        </tr>
-                                    </c:forEach>
+                                <c:forEach items="${requestScope.productList}" var="item" varStatus="count">
+                                    <tr class="product">
+                                        <td><input id="cb${count.index}" name="pname${count.index}" type="checkbox" value="${item.get("name")}" onchange="valueChanged(${count.index})"> ${item.get("name")} </td>
+                                        <td><input id="q${count.index}" name="quantity${count.index}" type="text" value="0" style="visibility:hidden"></td>
+                                    </tr>
+                                </c:forEach>
 
-                                    <script>
-
-                                        function valueChanged(a) {
-                                            let cb = document.getElementById("q"+a);
-                                            if(cb.style.visibility == "hidden")
-                                                cb.style.visibility = "visible";
-                                            else
-                                                cb.style.visibility = "hidden";
-                                        }
-
-                                        function myFunction() {
-                                            var input, filter, table, tr, td, i, txtValue;
-                                            input = document.getElementById("myInput");
-                                            filter = input.value.toUpperCase();
-                                            table = document.getElementById("myTable");
-                                            tr = table.getElementsByTagName("tr");
-                                            for (i = 0; i < tr.length; i++) {
-                                                td = tr[i].getElementsByTagName("td")[0];
-                                                if (td) {
-                                                    txtValue = td.textContent || td.innerText;
-                                                    if (txtValue.toUpperCase().indexOf(filter) > -1) {
-                                                        tr[i].style.display = "";
-                                                    } else {
-                                                        tr[i].style.display = "none";
-                                                    }
+                                <script>
+                                    function valueChanged(a) {
+                                        let cb = document.getElementById("q"+a);
+                                        if(cb.style.visibility == "hidden")
+                                            cb.style.visibility = "visible";
+                                        else
+                                            cb.style.visibility = "hidden";
+                                    }
+                                    function myFunction() {
+                                        var input, filter, table, tr, td, i, txtValue;
+                                        input = document.getElementById("myInput");
+                                        filter = input.value.toUpperCase();
+                                        table = document.getElementById("myTable");
+                                        tr = table.getElementsByTagName("tr");
+                                        for (i = 0; i < tr.length; i++) {
+                                            td = tr[i].getElementsByTagName("td")[0];
+                                            if (td) {
+                                                txtValue = td.textContent || td.innerText;
+                                                if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                                                    tr[i].style.display = "";
+                                                } else {
+                                                    tr[i].style.display = "none";
                                                 }
                                             }
                                         }
-
-                                    </script>
+                                    }
+                                </script>
                                 </tbody>
                             </table>
                             <!--<div class="form-check mb-2 mr-sm-2">
