@@ -31,8 +31,21 @@ public class DisplayUsersController extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
-        String id = (String) req.getParameter("item.id");
-        System.out.println(id);
+
+
+        String id = req.getParameter("id");
+        String firstname = req.getParameter("name");
+        String lastname = req.getParameter("lastname");
+        String phone = req.getParameter("phone");
+        String mail = req.getParameter("email");
+
+        User user = new User(id,firstname,lastname,phone,mail);
+
+
+        mc.updateUser(user);
+
+        RequestDispatcher rd = req.getRequestDispatcher("displayUsers.jsp");
+        rd.forward(req, resp);
         /*String name = req.getParameter("name");
         String quantity= req.getParameter("quantity");
 
@@ -42,4 +55,5 @@ public class DisplayUsersController extends HttpServlet {
         RequestDispatcher rd = req.getRequestDispatcher("home.jsp");
         rd.forward(req, resp);*/
     }
+
 }

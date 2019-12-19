@@ -10,6 +10,7 @@
         background-color: rgb(210,230,240);
         overflow-x: hidden;
         padding-top: 20px;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     }
     .mainMenu {
         padding: 6px 8px 6px 16px;
@@ -45,7 +46,7 @@
 </head>
 <body>
 <div id="mySidenav" class="sidenav">
-    <a <c:if test="${param.pageName == 'home'}">href="#" </c:if> class="mainMenu" href="#">Home</a>
+    <a <c:if test="${param.pageName == 'home'}">href="#" </c:if> class="mainMenu" href="home">Home</a>
     <a <c:if test="${param.pageName == 'users'}">href="#" </c:if> class="mainMenu" href="#">Users</a>
     <a <c:if test="${param.pageName == 'addUser'}">href="#" </c:if> class="subMenu" href="addUser">Add User</a>
     <a <c:if test="${param.pageName == 'displayUsers'}">href="#" </c:if> class="subMenu" href="displayUsers">Display Users</a>
