@@ -67,9 +67,24 @@
                             <select name="item">
                                 <option value="false">false</option>
                                 <option value="true">true</option>
-
                             </select>
 
+                            <table class ="table table-stripped">
+                                <thead>
+                                <tr>
+                                    <th scope="col">Name</th>
+                                    <th scope="col">Quantity</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                    <c:forEach items="${requestScope.productList}" var="item">
+                                        <tr>
+                                            <td><input type="text" value="${item.get("name")}" readonly></td>
+                                            <td><input type="text" value="${item.get("quantity")}"></td>
+                                        </tr>
+                                    </c:forEach>
+                                </tbody>
+                            </table>
                             <!--<div class="form-check mb-2 mr-sm-2">
                                 <label class="form-check-label">
                                     <input class="form-check-input" type="checkbox"> Remember me

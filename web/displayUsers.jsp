@@ -34,7 +34,6 @@
         <table class="table table-striped">
             <thead>
             <tr>
-                <th scope="col">User ID</th>
                 <th scope="col">First Name</th>
                 <th scope="col">Last Name</th>
                 <th scope="col">Phone Number</th>
@@ -86,7 +85,6 @@
                         </div>
                     </div>
                 </div>
-
             </div>
 
             <div>
