@@ -3,6 +3,7 @@ package edu.aydin.InventoryTracker.Controller;
 import edu.aydin.InventoryTracker.Database.MongoAdapter;
 import edu.aydin.InventoryTracker.Database.MongoConnection;
 import edu.aydin.InventoryTracker.Model.User;
+import org.bson.Document;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -23,6 +24,8 @@ public class DisplayUsersController extends HttpServlet {
         ArrayList<User> userList;
         userList = mc.getUserList();
         req.setAttribute("userList",userList);
+        ArrayList<Document> productList = mc.getProductList();
+        req.setAttribute("productList", productList);
 
         RequestDispatcher rd = req.getRequestDispatcher("displayUsers.jsp");
         rd.forward(req, resp);

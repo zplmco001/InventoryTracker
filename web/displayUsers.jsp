@@ -16,6 +16,18 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 
+    <style>
+        #myInput {
+            background-position: 10px 10px;
+            background-repeat: no-repeat;
+            width: 100%;
+            font-size: 16px;
+            padding: 12px 20px 12px 40px;
+            border: 1px solid #ddd;
+            margin-bottom: 12px;
+        }
+    </style>
+
 </head>
 <body>
 <jsp:include page="header.jsp" >
@@ -82,8 +94,9 @@
                                     <tbody>
                                     <c:forEach items="${requestScope.productList}" var="item" varStatus="count">
                                         <tr class="product">
-                                            <td><input id="cb${count.index}" type="checkbox" value="${item.get("name")}" onchange="valueChanged(${count.index})"> ${item.get("name")} </td>
-                                            <td><input id="q${count.index}" type="text" style="visibility:hidden"></td>
+
+                                            <td><input id="cb${count.index}" name="pname${count.index}" type="checkbox" value="${item.get("name")}" onchange="valueChanged(${count.index})"> ${item.get("name")} </td>
+                                            <td><input id="q${count.index}" name="quantity${count.index}" type="text" value="0" style="visibility:hidden"></td>
                                         </tr>
                                     </c:forEach>
 
