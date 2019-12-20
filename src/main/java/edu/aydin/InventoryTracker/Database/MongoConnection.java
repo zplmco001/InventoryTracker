@@ -81,6 +81,20 @@ public class MongoConnection {
 
         }
     }
+
+    public void deleteUser(String userId){
+        MongoCollection collection = this.adapter.getUserCollection();
+        Document found = (Document) collection.find(new Document("_id",new ObjectId(userId))).first();
+        collection.deleteOne(found);
+        System.out.println("buraya girdi ve sildi");
+    }
+
+    public void deleteProduct(String productId){
+        MongoCollection collection = this.adapter.getProductCollection();
+        Document found = (Document) collection.find(new Document("_id",new ObjectId(productId))).first();
+        collection.deleteOne(found);
+    }
+
     public void updateProductQuantity(String productName,int toBeUpdated){
         MongoCollection collection = this.adapter.getProductCollection();
         Bson bsonFilter = Filters.eq("name", productName);

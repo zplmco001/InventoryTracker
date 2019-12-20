@@ -176,7 +176,7 @@
                 </td>
                 <td>
                     <button type="button" data-toggle="modal" data-target="#edit-user${count.index}" style="width: 78px !important" class="btn btn-primary" >Edit</button>
-                    <button type="button" data-toggle="modal" data-target="#delete-user" style="width: 78px !important" class="btn btn-danger">Delete</button>
+                    <button type="button" data-toggle="modal" data-target="#delete-user${count.index}" style="width: 78px !important" class="btn btn-danger">Delete</button>
                 </td>
                 </tr>
             <div>
@@ -211,7 +211,7 @@
             </div>
 
             <div>
-                <div class="modal fade" id="delete-user" role="dialog">
+                <div class="modal fade" id="delete-user${count.index}" role="dialog">
                     <div class="modal-dialog">
                         <!-- Modal content-->
                         <div class="modal-content">
@@ -222,10 +222,14 @@
                             <div class="modal-body">
                                 <h3>Are you sure?</h3>
                             </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Dismiss</button>
-                                <button type="button" class="btn btn-primary">Delete</button>
-                            </div>
+                            <form action="displayUsers" method="post">
+                                <input value="${item.id}" type="hidden" name="deletedId" size="32" readonly class="form-control validate">
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Dismiss</button>
+                                    <input type="submit" value="Delete" class="btn btn-primary"></input>
+                                </div>
+                            </form>
+
                         </div>
                     </div>
                 </div>

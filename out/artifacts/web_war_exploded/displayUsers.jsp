@@ -16,6 +16,18 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 
+    <style>
+        #myInput {
+            background-position: 10px 10px;
+            background-repeat: no-repeat;
+            width: 100%;
+            font-size: 16px;
+            padding: 12px 20px 12px 40px;
+            border: 1px solid #ddd;
+            margin-bottom: 12px;
+        }
+    </style>
+
 </head>
 <body>
 <jsp:include page="header.jsp" >
@@ -82,8 +94,9 @@
                                     <tbody>
                                     <c:forEach items="${requestScope.productList}" var="item" varStatus="count">
                                         <tr class="product">
-                                            <td><input id="cb${count.index}" type="checkbox" value="${item.get("name")}" onchange="valueChanged(${count.index})"> ${item.get("name")} </td>
-                                            <td><input id="q${count.index}" type="text" style="visibility:hidden"></td>
+
+                                            <td><input id="cb${count.index}" name="pname${count.index}" type="checkbox" value="${item.get("name")}" onchange="valueChanged(${count.index})"> ${item.get("name")} </td>
+                                            <td><input id="q${count.index}" name="quantity${count.index}" type="text" value="0" style="visibility:hidden"></td>
                                         </tr>
                                     </c:forEach>
 
@@ -163,7 +176,7 @@
                 </td>
                 <td>
                     <button type="button" data-toggle="modal" data-target="#edit-user${count.index}" style="width: 78px !important" class="btn btn-primary" >Edit</button>
-                    <button type="button" data-toggle="modal" data-target="#delete-user" style="width: 78px !important" class="btn btn-danger">Delete</button>
+                    <button type="button" data-toggle="modal" data-target="#delete-user${count.index}" style="width: 78px !important" class="btn btn-danger">Delete</button>
                 </td>
                 </tr>
             <div>
@@ -198,7 +211,7 @@
             </div>
 
             <div>
-                <div class="modal fade" id="delete-user" role="dialog">
+                <div class="modal fade" id="delete-user${count.index}" role="dialog">
                     <div class="modal-dialog">
                         <!-- Modal content-->
                         <div class="modal-content">
@@ -209,10 +222,14 @@
                             <div class="modal-body">
                                 <h3>Are you sure?</h3>
                             </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Dismiss</button>
-                                <button type="button" class="btn btn-primary">Delete</button>
-                            </div>
+                            <form action="displayUsers" method="post">
+                                <input value="${item.id}" type="hidden" name="deletedId" size="32" readonly class="form-control validate">
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Dismiss</button>
+                                    <input type="submit" value="Delete" class="btn btn-primary"></input>
+                                </div>
+                            </form>
+
                         </div>
                     </div>
                 </div>
