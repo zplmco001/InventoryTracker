@@ -23,6 +23,12 @@ public class ProductController extends HttpServlet {
 
         ArrayList<Document> products = mc.getProductList();
         req.setAttribute("products",products);
+        ArrayList<Map<String,Object>> items = new ArrayList<>();
+        ArrayList<Object> values = new ArrayList<>();
+        for (Document doc: products){
+            items.add(new HashMap<>(doc));
+        }
+        req.setAttribute("items",items);
 
         RequestDispatcher rd = req.getRequestDispatcher("addProduct.jsp");
         rd.forward(req, resp);
