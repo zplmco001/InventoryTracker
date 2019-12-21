@@ -8,20 +8,10 @@
   <component name="ChangeListManager">
     <list default="true" id="05d68a75-2d56-4e8a-99f9-3435ef13adeb" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/web_war_exploded/WEB-INF/classes/edu/aydin/InventoryTracker/Controller/DisplayUsersController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/web_war_exploded/WEB-INF/classes/edu/aydin/InventoryTracker/Controller/DisplayUsersController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/web_war_exploded/WEB-INF/classes/edu/aydin/InventoryTracker/Controller/ProductController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/web_war_exploded/WEB-INF/classes/edu/aydin/InventoryTracker/Controller/ProductController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/web_war_exploded/WEB-INF/classes/edu/aydin/InventoryTracker/Controller/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/web_war_exploded/WEB-INF/classes/edu/aydin/InventoryTracker/Controller/UserController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/web_war_exploded/WEB-INF/classes/edu/aydin/InventoryTracker/Database/MongoConnection.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/web_war_exploded/WEB-INF/classes/edu/aydin/InventoryTracker/Database/MongoConnection.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/web_war_exploded/addProduct.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/web_war_exploded/addProduct.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/web_war_exploded/addUser.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/web_war_exploded/addUser.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/web_war_exploded/displayUsers.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/web_war_exploded/displayUsers.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/edu/aydin/InventoryTracker/Controller/DisplayUsersController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/aydin/InventoryTracker/Controller/DisplayUsersController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/aydin/InventoryTracker/Database/MongoConnection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/aydin/InventoryTracker/Database/MongoConnection.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/edu/aydin/InventoryTracker/Controller/DisplayUsersController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/aydin/InventoryTracker/Controller/DisplayUsersController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/edu/aydin/InventoryTracker/Controller/ProductController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/aydin/InventoryTracker/Controller/ProductController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/edu/aydin/InventoryTracker/Controller/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/aydin/InventoryTracker/Controller/UserController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/edu/aydin/InventoryTracker/Database/MongoConnection.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/aydin/InventoryTracker/Database/MongoConnection.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/displayUsers.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/displayUsers.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/aydin/InventoryTracker/Controller/ProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/aydin/InventoryTracker/Controller/ProductController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/aydin/InventoryTracker/Controller/SendMailController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/aydin/InventoryTracker/Controller/SendMailController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/addProduct.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/addProduct.jsp" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -196,7 +186,8 @@
       <workItem from="1576331263515" duration="143000" />
       <workItem from="1576422901373" duration="7260000" />
       <workItem from="1576672444288" duration="31212000" />
-      <workItem from="1576867797330" duration="1869000" />
+      <workItem from="1576867797330" duration="2027000" />
+      <workItem from="1576928004703" duration="2376000" />
     </task>
     <task id="LOCAL-00001" summary="locin sikrin">
       <created>1574864308100</created>
@@ -310,7 +301,14 @@
       <option name="project" value="LOCAL" />
       <updated>1576777561227</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="delete user has done , product delete method has done">
+      <created>1576869996402</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1576869996402</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -340,6 +338,7 @@
     <MESSAGE value="Edit user has done" />
     <MESSAGE value="update product" />
     <MESSAGE value="add user moved users screen" />
-    <option name="LAST_COMMIT_MESSAGE" value="add user moved users screen" />
+    <MESSAGE value="delete user has done , product delete method has done" />
+    <option name="LAST_COMMIT_MESSAGE" value="delete user has done , product delete method has done" />
   </component>
 </project>

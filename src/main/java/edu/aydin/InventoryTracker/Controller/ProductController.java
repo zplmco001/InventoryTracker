@@ -37,30 +37,38 @@ public class ProductController extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
+        RequestDispatcher rd = req.getRequestDispatcher("home.jsp");
         String name = req.getParameter("name");
         String quantity= req.getParameter("quantity");
 
-        //List<String> parameterNames = new ArrayList<>(req.getParameterMap().keySet());
-        Map<String,String> proVals = new HashMap<>();
-        ArrayList<Map.Entry<String,String[]>> parameterValues = new ArrayList<>(req.getParameterMap().entrySet());
-        for (int i=0;i<parameterValues.size();i++){
-            String key;
-            String value;
-            if (i<2){
-                key = parameterValues.get(i).getKey();
-                value = parameterValues.get(i).getValue()[0];
+        String deleteId = req.getParameter("deletedId");
+        System.out.println("gelen id "+deleteId);
 
-            }
-            else{
-                key = parameterValues.get(i).getValue()[0];
-                value = parameterValues.get(i+1).getValue()[0];
-                i++;
-            }
-            proVals.put(key,value);
-            System.out.println(key+":"+value);
-        }
+        if(deleteId!=null){
+            System.out.println("buraya girdi ");
+            mc.deleteProduct(deleteId);
+        }else{
+            //List<String> parameterNames = new ArrayList<>(req.getParameterMap().keySet());
+            Map<String,String> proVals = new HashMap<>();
+            ArrayList<Map.Entry<String,String[]>> parameterValues = new ArrayList<>(req.getParameterMap().entrySet());
+            for (int i=0;i<parameterValues.size();i++){
+                String key;
+                String value;
+                if (i<2){
+                    key = parameterValues.get(i).getKey();
+                    value = parameterValues.get(i).getValue()[0];
 
-        mc.addProduct(proVals);
+                }
+                else{
+                    key = parameterValues.get(i).getValue()[0];
+                    value = parameterValues.get(i+1).getValue()[0];
+                    i++;
+                }
+                proVals.put(key,value);
+                System.out.println(key+":"+value);
+            }
+
+            mc.addProduct(proVals);
 
         /*for(Map.Entry<String, String[]> entry : req.getParameterMap().entrySet()){
             String parname = entry.getKey();
@@ -70,9 +78,12 @@ public class ProductController extends HttpServlet {
         /*while (req.getParameterNames().hasMoreElements()){
             System.out.println(req.getParameterNames().nextElement());
         }*/
-        //mc.addroduct(name,quantity);
+            //mc.addroduct(name,quantity);
+        }
 
-        RequestDispatcher rd = req.getRequestDispatcher("home.jsp");
+
+
+
         rd.forward(req, resp);
     }
 }

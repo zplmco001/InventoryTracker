@@ -13,6 +13,7 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 import java.io.IOException;
 import java.util.ArrayList;
 
@@ -30,6 +31,9 @@ public class SendMailController extends HttpServlet {
         allMailList.clear();
         String username = (String) req.getSession().getAttribute("username");
         String userMail = mc.getEmailbyUsername(username);
+        req.setAttribute("userMail",userMail);
+
+
 
         MongoCursor<Document> cursor = mongoAdapter.getUserCollection().find().iterator();
         while (cursor.hasNext()){
@@ -40,11 +44,17 @@ public class SendMailController extends HttpServlet {
             if(isAdmin.equals("true")){
                 adminMailList.add(email);
             }
-            allMailList.add(email);
+            if(!email.equals(userMail)){
+                allMailList.add(email);
+            }
+
+
 
         }
+        System.out.println("tüm liste "+allMailList.size());
+        System.out.println("admin mail "+adminMailList.size());
         req.setAttribute("adminMailList",adminMailList);
-        req.setAttribute("userMail",userMail);
+
         req.setAttribute("allMailList",allMailList);
         RequestDispatcher rd = req.getRequestDispatcher("sendMail.jsp");
         rd.forward(req, resp);

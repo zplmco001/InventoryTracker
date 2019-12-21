@@ -45,14 +45,13 @@ public class DisplayUsersController extends HttpServlet {
 
         if(deletedId!=null){
             mc.deleteUser(deletedId);
-            rd.forward(req, resp);
         }else{
             User user = new User(id,firstname,lastname,phone,mail);
             mc.updateUser(user);
-            rd.forward(req, resp);
+
         }
 
-
+        rd.forward(req, resp);
 
 
         /*String name = req.getParameter("name");
