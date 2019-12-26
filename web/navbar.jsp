@@ -50,9 +50,9 @@
     <a <c:if test="${param.pageName == 'users'}">href="#" </c:if> class="mainMenu" href="displayUsers">Users</a>
     <!--<a <c:if test="${param.pageName == 'addUser'}">href="#" </c:if> class="subMenu" href="addUser">Add User</a>-->
     <!--<a <c:if test="${param.pageName == 'displayUsers'}">href="#" </c:if> class="subMenu" href="displayUsers">Display Users</a>-->
-    <a <c:if test="${param.pageName == 'inventory'}">href="#" </c:if> class="mainMenu" href="#">Inventory</a>
-    <a <c:if test="${param.pageName == 'addProduct'}"> href="#" </c:if> class="subMenu" href="displayProducts">Add Product</a>
-    <a <c:if test="${param.pageName == 'editProduct'}">href="#" </c:if> class="subMenu" href="#">Edit Product</a>
+    <a <c:if test="${param.pageName == 'inventory'}">href="#" </c:if> class="mainMenu" href="displayProducts">Inventory</a>
+    <!--<a <c:if test="${param.pageName == 'addProduct'}"> href="#" </c:if> class="subMenu" href="displayProducts">Add Product</a>
+    <a <c:if test="${param.pageName == 'editProduct'}">href="#" </c:if> class="subMenu" href="#">Edit Product</a>-->
     <a <c:if test="${param.pageName == 'sendMail'}">href="#" </c:if> class="mainMenu" href="sendMail">Send Mail</a>
 </div>
 </body>

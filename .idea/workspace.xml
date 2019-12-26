@@ -9,10 +9,16 @@
     <list default="true" id="05d68a75-2d56-4e8a-99f9-3435ef13adeb" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/web_war_exploded/WEB-INF/classes/edu/aydin/InventoryTracker/Controller/IndexController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/web_war_exploded/WEB-INF/classes/edu/aydin/InventoryTracker/Controller/IndexController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/aydin/InventoryTracker/Controller/IndexController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/aydin/InventoryTracker/Controller/IndexController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/aydin/InventoryTracker/Filters/AuthenticationFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/aydin/InventoryTracker/Filters/AuthenticationFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/web_war_exploded/WEB-INF/classes/edu/aydin/InventoryTracker/Filters/AuthenticationFilter.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/web_war_exploded/WEB-INF/classes/edu/aydin/InventoryTracker/Filters/AuthenticationFilter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/web_war_exploded/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/web_war_exploded/WEB-INF/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/web_war_exploded/addProduct.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/web_war_exploded/addProduct.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/web_war_exploded/displayUsers.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/web_war_exploded/displayUsers.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/web_war_exploded/navbar.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/web_war_exploded/navbar.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/edu/aydin/InventoryTracker/Controller/IndexController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/aydin/InventoryTracker/Controller/IndexController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/edu/aydin/InventoryTracker/Filters/AuthenticationFilter.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/aydin/InventoryTracker/Filters/AuthenticationFilter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/addProduct.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/addProduct.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/displayUsers.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/displayUsers.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/navbar.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/navbar.jsp" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -311,7 +317,14 @@
       <option name="project" value="LOCAL" />
       <updated>1576869996402</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="delete user has done , product delete method has done">
+      <created>1577384269780</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1577384269780</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

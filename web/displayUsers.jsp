@@ -35,7 +35,7 @@
         </jsp:include>
     </div>
 
-    <div class="container" style="margin-left: 75px">
+    <div class="container" style="position: absolute; left: 150px;">
         <div >
             <div class="modal fade" id="addUserModal" role="dialog">
                 <div class="modal-dialog">
