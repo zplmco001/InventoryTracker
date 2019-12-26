@@ -15,6 +15,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
+import java.io.PrintWriter;
 
 public class IndexController extends HttpServlet {
 
@@ -39,12 +40,14 @@ public class IndexController extends HttpServlet {
             HttpSession session = req.getSession();
             session.setAttribute("username",username);
             session.setAttribute("password",password);
+            session.setMaxInactiveInterval(30*60);
             if(checkIsAdmin(username)){
                 req.setAttribute("isAdmin",true);
                 session.setAttribute("isAdmin",true);
             }else{
                 session.setAttribute("isAdmin",false);
             }
+            System.out.println("index:"+session.getAttribute("username"));
             mongoConnection.setVisit();
             resp.sendRedirect("home");
         }else{

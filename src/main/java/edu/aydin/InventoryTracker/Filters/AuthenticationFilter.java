@@ -8,6 +8,8 @@ import org.bson.Document;
 
 import javax.servlet.*;
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 import java.io.IOException;
 
 public class AuthenticationFilter implements Filter {
@@ -19,9 +21,30 @@ public class AuthenticationFilter implements Filter {
 
     public void doFilter(ServletRequest req, ServletResponse resp, FilterChain chain) throws ServletException, IOException {
         HttpServletRequest request = (HttpServletRequest) req;
+        HttpServletResponse response = (HttpServletResponse) resp;
+
+        String uri = request.getRequestURI();
+
+        HttpSession session = request.getSession(false);
+
+        String username = "";
+        try {
+            username = request.getSession().getAttribute("username").toString();
+        }catch (NullPointerException e){
+
+        }
 
 
-        chain.doFilter(req, resp);
+        if ((username == null || !(username.length()>0)) && !(uri.endsWith("exploded/")||uri.endsWith("index.jsp")
+        ||uri.endsWith("handle_login"))){
+            System.out.println("filter:"+username);
+            response.sendRedirect("index.jsp");
+        }else {
+
+            chain.doFilter(req, resp);
+        }
+
+
 
 
     }
