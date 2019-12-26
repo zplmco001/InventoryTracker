@@ -1,6 +1,7 @@
 package edu.aydin.InventoryTracker.Controller;
 
 import edu.aydin.InventoryTracker.Database.MongoConnection;
+import edu.aydin.InventoryTracker.Model.ShowProduct;
 import org.bson.Document;
 
 import javax.servlet.RequestDispatcher;
@@ -23,12 +24,13 @@ public class ProductController extends HttpServlet {
 
         ArrayList<Document> products = mc.getProductList();
         req.setAttribute("products",products);
-        ArrayList<Map<String,Object>> items = new ArrayList<>();
-        ArrayList<Object> values = new ArrayList<>();
+        ArrayList<ShowProduct> items = new ArrayList<>();
+
         for (Document doc: products){
-            items.add(new HashMap<>(doc));
+            items.add(new ShowProduct(new HashMap<>(doc)));
         }
         req.setAttribute("items",items);
+
 
         RequestDispatcher rd = req.getRequestDispatcher("addProduct.jsp");
         rd.forward(req, resp);

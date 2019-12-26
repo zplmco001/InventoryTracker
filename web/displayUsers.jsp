@@ -1,15 +1,8 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<%--
-  Created by IntelliJ IDEA.
-  User: seyitaliyaman
-  Date: 4.12.2019
-  Time: 17:06
-  To change this template use File | Settings | File Templates.
---%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>Display Users</title>
+    <title>Users - Inventory Tracker</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
@@ -44,10 +37,7 @@
 
     <div class="container" style="margin-left: 75px">
         <div >
-
-            <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#addProductModal">Open Modal</button>
-
-            <div class="modal fade" id="addProductModal" role="dialog">
+            <div class="modal fade" id="addUserModal" role="dialog">
                 <div class="modal-dialog">
 
                     <!-- Modal content-->
@@ -237,6 +227,7 @@
             </c:forEach>
             </tbody>
         </table>
+        <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#addUserModal">Add User</button>
     </div>
 </div>
 </body>

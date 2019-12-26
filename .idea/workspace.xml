@@ -7,11 +7,23 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="05d68a75-2d56-4e8a-99f9-3435ef13adeb" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/edu/aydin/InventoryTracker/Model/ShowProduct.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/aydin/InventoryTracker/Controller/DisplayUsersController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/aydin/InventoryTracker/Controller/DisplayUsersController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/web_war_exploded/WEB-INF/classes/edu/aydin/InventoryTracker/Controller/DisplayUsersController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/web_war_exploded/WEB-INF/classes/edu/aydin/InventoryTracker/Controller/DisplayUsersController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/web_war_exploded/WEB-INF/classes/edu/aydin/InventoryTracker/Controller/ProductController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/web_war_exploded/WEB-INF/classes/edu/aydin/InventoryTracker/Controller/ProductController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/web_war_exploded/WEB-INF/classes/edu/aydin/InventoryTracker/Controller/SendMailController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/web_war_exploded/WEB-INF/classes/edu/aydin/InventoryTracker/Controller/SendMailController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/web_war_exploded/addProduct.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/web_war_exploded/addProduct.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/web_war_exploded/displayUsers.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/web_war_exploded/displayUsers.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/web_war_exploded/home.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/web_war_exploded/home.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/web_war_exploded/navbar.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/web_war_exploded/navbar.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/edu/aydin/InventoryTracker/Controller/ProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/aydin/InventoryTracker/Controller/ProductController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/aydin/InventoryTracker/Controller/SendMailController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/aydin/InventoryTracker/Controller/SendMailController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/edu/aydin/InventoryTracker/Controller/DisplayUsersController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/aydin/InventoryTracker/Controller/DisplayUsersController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/edu/aydin/InventoryTracker/Controller/ProductController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/aydin/InventoryTracker/Controller/ProductController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/edu/aydin/InventoryTracker/Controller/SendMailController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/aydin/InventoryTracker/Controller/SendMailController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/addProduct.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/addProduct.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/displayUsers.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/displayUsers.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/home.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/home.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/navbar.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/navbar.jsp" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -188,6 +200,8 @@
       <workItem from="1576672444288" duration="31212000" />
       <workItem from="1576867797330" duration="2027000" />
       <workItem from="1576928004703" duration="2376000" />
+      <workItem from="1577023668342" duration="579000" />
+      <workItem from="1577122609929" duration="199000" />
     </task>
     <task id="LOCAL-00001" summary="locin sikrin">
       <created>1574864308100</created>

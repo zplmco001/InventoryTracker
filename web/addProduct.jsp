@@ -2,7 +2,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>AddProduct</title>
+    <title>Products - Inventory Tracker</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
@@ -37,7 +37,7 @@
 
 
 
-    <div class="container" style="margin: 100px;">
+    <div class="container" style="margin: 75px;">
 
         <table class="table table-striped">
             <thead>
@@ -50,28 +50,18 @@
             <tbody>
                     <c:forEach items="${requestScope.items}" var="itemval" varStatus="count">
                         <tr>
-                        <c:forEach var="type" items="${itemval}" varStatus="counts">
+                                <td>${itemval.name}</td>
+                                <td>${itemval.quantity}</td>
 
-                            <c:if test="${counts.index == 0}">
-                                <td>${type.value}</td>
-                            </c:if>
-                            <c:if test="${counts.index == 2}">
-                                <td>${type.value}</td>
-                            </c:if>
-                            <c:if test="${counts.index >= 2}">
+
                                 <td>
-                                    <c:if test="${counts.index > 2}">
-                                        <c:out value="${type.key}:${type.value}"/><br>
-                                    </c:if>
-
+                                    <c:forEach var="type" items="${itemval.pMap}">
+                                        <c:if test="${type.key != '_id'}">
+                                            <c:out value="${type.key}:${type.value}"/><br>
+                                        </c:if>
+                                    </c:forEach>
                                 </td>
 
-                            </c:if>
-
-
-
-
-                        </c:forEach>
 
 
                             <td>
@@ -124,7 +114,7 @@
                                             <h3>Are you sure?</h3>
                                         </div>
                                         <form action="displayProducts" method="post">
-                                            <c:forEach var="typec" items="${itemval}" >
+                                            <c:forEach var="typec" items="${itemval.pMap}" >
                                                 <c:if test="${typec.key == '_id'}">
                                                     <input value="${typec.value}" type="hidden" name="deletedId" size="32" readonly class="form-control validate">
                                                 </c:if>
@@ -145,7 +135,7 @@
             </tbody>
         </table>
 
-        <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#addProductModal">Open Modal</button>
+        <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#addProductModal">Add Product</button>
 
         <div class="modal fade" id="addProductModal" role="dialog">
             <div class="modal-dialog">
