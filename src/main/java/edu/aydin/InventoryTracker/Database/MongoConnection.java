@@ -4,6 +4,7 @@ import com.mongodb.BasicDBObject;
 import com.mongodb.client.FindIterable;
 import com.mongodb.client.MongoCollection;
 import edu.aydin.InventoryTracker.Model.Product;
+import edu.aydin.InventoryTracker.Model.ShowProduct;
 import edu.aydin.InventoryTracker.Model.User;
 import com.mongodb.client.MongoCursor;
 import com.mongodb.client.model.Filters;
@@ -101,16 +102,18 @@ public class MongoConnection {
         collection.updateOne(bsonFilter, new Document("$set",new Document("quantity",String.valueOf(toBeUpdated))));
     }
 
-    public void updateProduct(Map<String,String> product){
+    public void updateProduct(ShowProduct product){
         MongoCollection collection = this.adapter.getProductCollection();
-        Document found = (Document) collection.find(new Document("_id",new ObjectId(product.get("_id")))).first();
+        Document found = (Document) collection.find(new Document("_id",new ObjectId(product.pMap.get("_id").toString()))).first();
 
-        ArrayList<String> attrKey = new ArrayList<>(product.keySet());
-        ArrayList<String> attrValue = new ArrayList<>(product.values());
+        ArrayList<String> attrKey = new ArrayList<>(product.pMap.keySet());
+        ArrayList<Object> attrValue = new ArrayList<>(product.pMap.values());
 
         if(found != null){
             Document document = new Document();
-            for(int i=0; i<product.size(); i++){
+            document.append("name",product.name);
+            document.append("quantity",product.quantity);
+            for(int i=0; i<product.pMap.size(); i++){
                if(!attrKey.get(i).equals("_id")){
                    document.append(attrKey.get(i),attrValue.get(i));
                }

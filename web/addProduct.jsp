@@ -80,13 +80,28 @@
                                             <h4 class="modal-title">Modal Header</h4>
                                         </div>
                                         <div class="modal-body">
-                                            <form action="displayUsers" method="post">
+                                            <form action="displayProducts" method="post">
 
-                                                Id: <input value="${item.id}" type="text" name="id" size="32" readonly class="form-control validate">
-                                                First Name: <input value="${item.firstname}"  type="text" name="name" size="32" class="form-control validate" contenteditable="true"><br>
-                                                Last Name: <input  value="${item.lastname}" type="text" name="lastname" size="32" class="form-control validate"><br>
-                                                Phone Number: <input value="${item.phoneNumber}" type="text" name="phone" size="32" class="form-control validate"><br>
-                                                E-Mail: <input  value="${item.email}" type="text" name="email" size="32" class="form-control validate"><br>
+
+                                                Product Name: <input value="${itemval.name}" type="text" name="productName" size="32" class="form-control validate" contenteditable="true">
+                                                Product Quantity: <input value="${itemval.quantity}" type="text" name="productQuantity" size="32" class="form-control validate" contenteditable="true">
+
+                                                <c:forEach var="typec" items="${itemval.pMap}" varStatus="cnt">
+
+
+                                                    <input value="${count.index}" type="hidden" name="editedMap" size="32" readonly class="form-control validate">
+                                                    <c:choose>
+                                                        <c:when test="${typec.key == '_id'}">
+                                                            <input value="${typec.value}" type="hidden" name="editedId" size="32" readonly class="form-control validate">
+                                                        </c:when>
+
+                                                        <c:otherwise>
+                                                            ${typec.key}: <input value="${typec.value}" type="text" name="prop${cnt.index}" size="32" class="form-control validate" contenteditable="true">
+                                                        </c:otherwise>
+
+                                                    </c:choose>
+
+                                                </c:forEach>
 
 
                                                 <div class="modal-footer">

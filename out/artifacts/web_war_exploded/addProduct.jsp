@@ -2,7 +2,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>AddProduct</title>
+    <title>Products - Inventory Tracker</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
@@ -37,7 +37,7 @@
 
 
 
-    <div class="container" style="margin: 100px;">
+    <div class="container" style="margin: 75px;">
 
         <table class="table table-striped">
             <thead>
@@ -50,35 +50,23 @@
             <tbody>
                     <c:forEach items="${requestScope.items}" var="itemval" varStatus="count">
                         <tr>
-                        <c:forEach var="type" items="${itemval}" varStatus="counts">
+                                <td>${itemval.name}</td>
+                                <td>${itemval.quantity}</td>
 
-                            <c:if test="${counts.index == 0}">
-                                <td>${type.value}</td>
-                            </c:if>
-                            <c:if test="${counts.index == 2}">
-                                <td>${type.value}</td>
-                            </c:if>
-                            <c:if test="${counts.index >= 2}">
+
                                 <td>
-                                    <c:if test="${counts.index > 2}">
-                                        <c:out value="${type.key}:${type.value}"/><br>
-                                    </c:if>
-
+                                    <c:forEach var="type" items="${itemval.pMap}">
+                                        <c:if test="${type.key != '_id'}">
+                                            <c:out value="${type.key}:${type.value}"/><br>
+                                        </c:if>
+                                    </c:forEach>
                                 </td>
-                            </c:if>
 
 
-
-
-                        </c:forEach>
-                        <c:forEach var="type" items="${itemval}" varStatus="counts">
-
-
-                        </c:forEach>
 
                             <td>
                                 <button type="button" data-toggle="modal" data-target="#edit-user${count.index}" style="width: 78px !important" class="btn btn-primary" >Edit</button>
-                                <button type="button" data-toggle="modal" data-target="#delete-user" style="width: 78px !important" class="btn btn-danger">Delete</button>
+                                <button type="button" data-toggle="modal" data-target="#delete-user${count.index}" style="width: 78px !important" class="btn btn-danger">Delete</button>
                             </td>
 
                         </tr>
@@ -92,13 +80,28 @@
                                             <h4 class="modal-title">Modal Header</h4>
                                         </div>
                                         <div class="modal-body">
-                                            <form action="displayUsers" method="post">
+                                            <form action="displayProducts" method="post">
 
-                                                Id: <input value="${item.id}" type="text" name="id" size="32" readonly class="form-control validate">
-                                                First Name: <input value="${item.firstname}"  type="text" name="name" size="32" class="form-control validate" contenteditable="true"><br>
-                                                Last Name: <input  value="${item.lastname}" type="text" name="lastname" size="32" class="form-control validate"><br>
-                                                Phone Number: <input value="${item.phoneNumber}" type="text" name="phone" size="32" class="form-control validate"><br>
-                                                E-Mail: <input  value="${item.email}" type="text" name="email" size="32" class="form-control validate"><br>
+
+                                                Product Name: <input value="${itemval.name}" type="text" name="productName" size="32" class="form-control validate" contenteditable="true">
+                                                Product Quantity: <input value="${itemval.quantity}" type="text" name="productQuantity" size="32" class="form-control validate" contenteditable="true">
+
+                                                <c:forEach var="typec" items="${itemval.pMap}" varStatus="cnt">
+
+
+                                                    <input value="${count.index}" type="hidden" name="editedMap" size="32" readonly class="form-control validate">
+                                                    <c:choose>
+                                                        <c:when test="${typec.key == '_id'}">
+                                                            <input value="${typec.value}" type="hidden" name="editedId" size="32" readonly class="form-control validate">
+                                                        </c:when>
+
+                                                        <c:otherwise>
+                                                            ${typec.key}: <input value="${typec.value}" type="text" name="prop${cnt.index}" size="32" class="form-control validate" contenteditable="true">
+                                                        </c:otherwise>
+
+                                                    </c:choose>
+
+                                                </c:forEach>
 
 
                                                 <div class="modal-footer">
@@ -114,7 +117,7 @@
                         </div>
 
                         <div>
-                            <div class="modal fade" id="delete-user" role="dialog">
+                            <div class="modal fade" id="delete-user${count.index}" role="dialog">
                                 <div class="modal-dialog">
                                     <!-- Modal content-->
                                     <div class="modal-content">
@@ -125,10 +128,19 @@
                                         <div class="modal-body">
                                             <h3>Are you sure?</h3>
                                         </div>
-                                        <div class="modal-footer">
-                                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Dismiss</button>
-                                            <button type="button" class="btn btn-primary">Delete</button>
-                                        </div>
+                                        <form action="displayProducts" method="post">
+                                            <c:forEach var="typec" items="${itemval.pMap}" >
+                                                <c:if test="${typec.key == '_id'}">
+                                                    <input value="${typec.value}" type="hidden" name="deletedId" size="32" readonly class="form-control validate">
+                                                </c:if>
+                                            </c:forEach>
+
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Dismiss</button>
+                                                <input type="submit" value="Delete" class="btn btn-primary">
+                                            </div>
+                                        </form>
+
                                     </div>
                                 </div>
                             </div>
@@ -138,7 +150,7 @@
             </tbody>
         </table>
 
-        <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#addProductModal">Open Modal</button>
+        <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#addProductModal">Add Product</button>
 
         <div class="modal fade" id="addProductModal" role="dialog">
             <div class="modal-dialog">
