@@ -67,8 +67,9 @@ public class SendMailController extends HttpServlet {
         String to = req.getParameter("adminMail");
         String message = req.getParameter("mail");
         String subject = req.getParameter("mailSubject");
+        String passowrd = req.getParameter("mailPassword");
 
-        MailSender mailSender = new MailSender(from,"seyitali34."
+        MailSender mailSender = new MailSender(from,passowrd
                 ,message,subject,from,to);
 
         try {

@@ -73,7 +73,8 @@ public class MongoConnection {
             Bson userdata = new Document().append("name",user.getFirstname())
                     .append("surname",user.getLastname())
                     .append("phone",user.getPhoneNumber())
-                    .append("email",user.getEmail());
+                    .append("email",user.getEmail())
+                    .append("productList",user.getUserProduct());
             Bson upFirst = new Document("$set",userdata);
             this.adapter.getUserCollection().updateMany(found,upFirst);
 

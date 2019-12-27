@@ -72,6 +72,13 @@
                 </div>
             </div>
 
+            <div class="form-group row">
+                <label for="mPassword" class="col-sm-2 col-form-label">Mail Password</label>
+                <div class="col-sm-10">
+                    <input name="mailPassword" type="password" class="form-control-plaintext" id="mPassword">
+                </div>
+            </div>
+
 
             <div class="form-group">
                 <label for="exampleFormControlTextarea1">Mail</label>

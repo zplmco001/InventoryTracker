@@ -17,15 +17,21 @@ import java.util.*;
 public class DisplayUsersController extends HttpServlet {
 
     MongoConnection mc = new MongoConnection();
-
+    ArrayList<User> userList;
+    Set<String> prodKeySet;
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
-        ArrayList<User> userList;
+
         userList = mc.getUserList();
+
         req.setAttribute("userList",userList);
         ArrayList<Document> productList = mc.getProductList();
         req.setAttribute("productList", productList);
+
+
+
+
 
         RequestDispatcher rd = req.getRequestDispatcher("displayUsers.jsp");
         rd.forward(req, resp);
@@ -43,11 +49,40 @@ public class DisplayUsersController extends HttpServlet {
         String mail = req.getParameter("email");
         String deletedId = req.getParameter("deletedId");
 
+
         if(deletedId!=null){
             mc.deleteUser(deletedId);
         }else{
-            User user = new User(id,firstname,lastname,phone,mail);
-            mc.updateUser(user);
+
+            String editId = req.getParameter("editId");
+
+            User editedUser = userList.get(Integer.parseInt(editId));
+            prodKeySet = editedUser.getUserProduct().keySet();
+
+            Iterator<String> itr = prodKeySet.iterator();
+
+
+            for(int i=0; i<editedUser.getUserProduct().size(); i++){
+
+                String prodKey = itr.next();
+                String prodValue = req.getParameter("prodVal"+i);
+
+
+                editedUser.getUserProduct().put(prodKey,prodValue);
+            }
+
+
+            System.out.println("edit user product  "+userList.get(Integer.parseInt(editId)).getUserProduct().get("computer"));
+
+            editedUser.setId(id);
+            editedUser.setFirstname(firstname);
+            editedUser.setLastname(lastname);
+            editedUser.setPhoneNumber(phone);
+            editedUser.setEmail(mail);
+
+
+            mc.updateUser(editedUser);
+
 
         }
 
